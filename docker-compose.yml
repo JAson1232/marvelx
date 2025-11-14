@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  claim-processor:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # Required: Google Gemini API for claim processing
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      
+      # Optional: Google Search API for clinic verification
+      # If not provided, clinic verification will be disabled
+      - GOOGLE_SEARCH_API_KEY=${GOOGLE_SEARCH_API_KEY:-}
+      - GOOGLE_SEARCH_ENGINE_ID=${GOOGLE_SEARCH_ENGINE_ID:-}
+      
+      # Server configuration
+      - APP_HOST=0.0.0.0
+      - APP_PORT=8000
+    volumes:
+      - ./results:/app/results
+      - ./claim 1:/app/claim 1:ro
+      - ./claim 2:/app/claim 2:ro
+      - ./claim 3:/app/claim 3:ro
+      - ./claim 4:/app/claim 4:ro
+      - ./claim 5:/app/claim 5:ro
+      - ./claim 6:/app/claim 6:ro
+      - ./claim 7:/app/claim 7:ro
+      - ./claim 8:/app/claim 8:ro
+      - ./claim 9:/app/claim 9:ro
+      - ./claim 10:/app/claim 10:ro
+      - ./claim 11:/app/claim 11:ro
+      - ./claim 12:/app/claim 12:ro
+      - ./claim 13:/app/claim 13:ro
+      - ./claim 14:/app/claim 14:ro
+      - ./claim 15:/app/claim 15:ro
+      - ./claim 16:/app/claim 16:ro
+      - ./claim 17:/app/claim 17:ro
+      - ./claim 18:/app/claim 18:ro
+      - ./claim 19:/app/claim 19:ro
+      - ./claim 20:/app/claim 20:ro
+      - ./claim 21:/app/claim 21:ro
+      - ./claim 22:/app/claim 22:ro
+      - ./claim 23:/app/claim 23:ro
+      - ./claim 24:/app/claim 24:ro
+      - ./claim 25:/app/claim 25:ro
+    restart: unless-stopped

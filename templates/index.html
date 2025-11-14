@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Claim Processing System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Insurance Claim Processing System</h1>
+            <p class="subtitle">AI-Powered Claim Evaluation using Google Gemini 2.0 Flash</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs" style="display: flex; gap: 20px; margin-bottom: 30px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px;">
+            <a href="/" class="nav-tab active" style="padding: 10px 20px; text-decoration: none; color: #3b82f6; font-weight: 500; border-bottom: 2px solid #3b82f6; margin-bottom: -2px;">
+                📋 Process Claims
+            </a>
+            <a href="/past-runs" class="nav-tab" style="padding: 10px 20px; text-decoration: none; color: #6b7280; font-weight: 500; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s;">
+                📜 Past Runs
+            </a>
+        </div>
+
+        <main>
+            <!-- Claim Selection Section -->
+            <section class="card">
+                <h2>📋 Select Claims to Process</h2>
+                <div class="claim-selection">
+                    <div class="select-all-container">
+                        <button id="selectAllBtn" class="btn btn-secondary">Select All 25 Claims</button>
+                        <button id="clearAllBtn" class="btn btn-secondary">Clear Selection</button>
+                    </div>
+                    
+                    <div id="claimGrid" class="claim-grid">
+                        <!-- Claims will be loaded here dynamically -->
+                    </div>
+                    
+                    <div class="selection-summary">
+                        <span id="selectionCount">0 claims selected</span>
+                    </div>
+                    
+                    <!-- Clinic Verification Toggle -->
+                    <div class="verification-toggle" style="margin: 20px 0; padding: 15px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                        <label style="display: flex; align-items: center; cursor: pointer; font-size: 1rem;">
+                            <input type="checkbox" id="clinicVerificationToggle" style="width: 20px; height: 20px; margin-right: 12px; cursor: pointer;">
+                            <div>
+                                <strong>🔍 Enable Clinic Verification (Google Search)</strong>
+                                <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #64748b;">
+                                    Allow the LLM to search Google to verify medical facilities mentioned in claims. 
+                                    This helps detect fake clinics but requires Google Search API configuration.
+                                </p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <button id="processBtn" class="btn btn-primary" disabled>
+                        <span class="btn-text">Process Selected Claims</span>
+                        <span class="btn-loader" style="display: none;">⏳ Processing...</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Claim Preview Section -->
+            <section class="card" id="previewSection" style="display: none;">
+                <h2>👁️ Claim Preview</h2>
+                <div id="previewContent"></div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="card" id="resultsSection" style="display: none;">
+                <h2>📊 Processing Results</h2>
+                
+                <div class="results-summary" id="resultsSummary"></div>
+                
+                <div class="results-grid" id="resultsGrid"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with FastAPI + Google Gemini | MarvelX Take-Home Assignment</p>
+        </footer>
+    </div>
+
+    <!-- Modal for detailed claim view -->
+    <div id="claimModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

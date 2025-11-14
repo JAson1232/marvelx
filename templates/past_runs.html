@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Runs - Insurance Claim Processing</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .nav-tabs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        .nav-tab {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #6b7280;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.3s;
+        }
+        
+        .nav-tab:hover {
+            color: #3b82f6;
+        }
+        
+        .nav-tab.active {
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
+        }
+        
+        .run-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .run-card:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+        
+        .run-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .run-timestamp {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .run-accuracy {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #10b981;
+        }
+        
+        .run-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .run-stat-item {
+            background: #f9fafb;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .run-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .run-stat-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .run-stat-item.approved .run-stat-value { color: #10b981; }
+        .run-stat-item.denied .run-stat-value { color: #ef4444; }
+        .run-stat-item.uncertain .run-stat-value { color: #f59e0b; }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6b7280;
+        }
+        
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .run-claims-preview {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+        
+        .claim-badge {
+            background: #e5e7eb;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: #4b5563;
+        }
+        
+        .view-button {
+            background: #3b82f6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.3s;
+        }
+        
+        .view-button:hover {
+            background: #2563eb;
+        }
+        
+        .filter-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .filter-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-label {
+            font-weight: 500;
+            color: #4b5563;
+        }
+        
+        .filter-select {
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 0.875rem;
+        }
+        
+        /* Results Section Styles */
+        .results-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .stat-card.approve {
+            border-left: 4px solid #10b981;
+        }
+        
+        .stat-card.deny {
+            border-left: 4px solid #ef4444;
+        }
+        
+        .stat-card.uncertain {
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .result-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .result-item:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+        
+        .result-item.approved {
+            border-left: 4px solid #10b981;
+        }
+        
+        .result-item.denied {
+            border-left: 4px solid #ef4444;
+        }
+        
+        .result-item.uncertain {
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .result-header h3 {
+            margin: 0;
+            color: #1f2937;
+        }
+        
+        .decision-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .decision-badge.approved {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .decision-badge.denied {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .decision-badge.uncertain {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .result-content {
+            color: #4b5563;
+        }
+        
+        .metadata {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 12px;
+        }
+        
+        .metadata-item {
+            font-size: 0.875rem;
+        }
+        
+        .confidence-bar {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            margin-top: 12px;
+            overflow: hidden;
+        }
+        
+        .confidence-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #f59e0b, #10b981);
+            transition: width 0.3s ease;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            color: #6b7280;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .close:hover {
+            color: #1f2937;
+        }
+        
+        #modalBody {
+            padding: 30px;
+        }
+        
+        .preview-section {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .preview-section h3 {
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+        
+        .google-search-section {
+            background: #e0f2fe;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #0284c7;
+        }
+        
+        .fraud-indicator {
+            background: #fee2e2;
+            border-left: 3px solid #ef4444;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        
+        .image-metadata {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .image-metadata h4 {
+            color: #1f2937;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Insurance Claim Processing System</h1>
+            <p class="subtitle">Past Processing Runs</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs">
+            <a href="/" class="nav-tab">
+                📋 Process Claims
+            </a>
+            <a href="/past-runs" class="nav-tab active">
+                📜 Past Runs
+            </a>
+        </div>
+
+        <main>
+            <!-- Filters -->
+            <section class="filter-section">
+                <div class="filter-group">
+                    <span class="filter-label">Sort by:</span>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="accuracy">Highest Accuracy</option>
+                        <option value="claims">Most Claims</option>
+                    </select>
+                    
+                    <span class="filter-label" style="margin-left: 20px;">Filter:</span>
+                    <select id="accuracyFilter" class="filter-select">
+                        <option value="all">All Runs</option>
+                        <option value="perfect">Perfect (100%)</option>
+                        <option value="high">High (>80%)</option>
+                        <option value="medium">Medium (50-80%)</option>
+                        <option value="low">Low (<50%)</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Runs List -->
+            <section class="card">
+                <h2>📊 All Processing Runs</h2>
+                <div id="runsList">
+                    <p class="loading">Loading past runs...</p>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="card" id="resultsSection" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2>📊 Processing Results</h2>
+                    <button id="backToRunsBtn" class="btn btn-secondary" style="padding: 8px 16px;">
+                        ← Back to Runs
+                    </button>
+                </div>
+                
+                <div class="results-summary" id="resultsSummary"></div>
+                
+                <div class="results-grid" id="resultsGrid"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with FastAPI + Google Gemini | MarvelX Take-Home Assignment</p>
+        </footer>
+    </div>
+
+    <!-- Modal for detailed claim view -->
+    <div id="claimModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    {% raw %}
+    <script>
+        let allRuns = [];
+        
+        // Load runs on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPastRuns();
+            setupFilters();
+            setupModalEvents();
+        });
+        
+        function setupFilters() {
+            document.getElementById('sortFilter').addEventListener('change', applyFilters);
+            document.getElementById('accuracyFilter').addEventListener('change', applyFilters);
+        }
+        
+        function setupModalEvents() {
+            // Modal close
+            const modal = document.getElementById('claimModal');
+            const closeBtn = modal.querySelector('.close');
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+            
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Back to runs button
+            document.getElementById('backToRunsBtn').addEventListener('click', () => {
+                document.getElementById('resultsSection').style.display = 'none';
+                document.querySelector('section.card h2').textContent = '📊 All Processing Runs';
+                document.getElementById('runsList').style.display = 'block';
+                document.querySelector('.filter-section').style.display = 'block';
+            });
+        }
+        
+        async function loadPastRuns() {
+            try {
+                const response = await fetch('/api/claims');
+                const data = await response.json();
+                
+                if (!data.runs || data.runs.length === 0) {
+                    document.getElementById('runsList').innerHTML = `
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📭</div>
+                            <h3>No Past Runs Found</h3>
+                            <p>Process some claims to see results here.</p>
+                            <a href="/" class="btn btn-primary" style="display: inline-block; margin-top: 20px;">
+                                Process Claims
+                            </a>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                allRuns = data.runs;
+                renderRuns(allRuns);
+                
+            } catch (error) {
+                console.error('Error loading runs:', error);
+                document.getElementById('runsList').innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">⚠️</div>
+                        <h3>Error Loading Runs</h3>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function applyFilters() {
+            const sortBy = document.getElementById('sortFilter').value;
+            const accuracyFilter = document.getElementById('accuracyFilter').value;
+            
+            let filtered = [...allRuns];
+            
+            // Apply accuracy filter
+            if (accuracyFilter !== 'all') {
+                filtered = filtered.filter(run => {
+                    const acc = run.accuracy * 100;
+                    switch(accuracyFilter) {
+                        case 'perfect': return acc === 100;
+                        case 'high': return acc > 80;
+                        case 'medium': return acc >= 50 && acc <= 80;
+                        case 'low': return acc < 50;
+                        default: return true;
+                    }
+                });
+            }
+            
+            // Apply sorting
+            filtered.sort((a, b) => {
+                switch(sortBy) {
+                    case 'newest':
+                        return b.timestamp.localeCompare(a.timestamp);
+                    case 'oldest':
+                        return a.timestamp.localeCompare(b.timestamp);
+                    case 'accuracy':
+                        return b.accuracy - a.accuracy;
+                    case 'claims':
+                        return b.claims_count - a.claims_count;
+                    default:
+                        return 0;
+                }
+            });
+            
+            renderRuns(filtered);
+        }
+        
+        function renderRuns(runs) {
+            const container = document.getElementById('runsList');
+            
+            if (runs.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🔍</div>
+                        <h3>No Runs Match Filters</h3>
+                        <p>Try adjusting your filter criteria.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = runs.map(run => {
+                const timestamp = new Date(run.timestamp).toLocaleString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+                
+                const stats = run.statistics;
+                const accuracy = (run.accuracy * 100).toFixed(1);
+                
+                return `
+                    <div class="run-card" onclick="viewRunDetails('${run.run_id}')">
+                        <div class="run-header">
+                            <div>
+                                <div class="run-timestamp">🕒 ${timestamp}</div>
+                                <div style="margin-top: 8px; color: #6b7280; font-size: 0.875rem;">
+                                    Run ID: ${run.run_id}
+                                </div>
+                            </div>
+                            <div class="run-accuracy" style="color: ${getAccuracyColor(run.accuracy)};">
+                                ${accuracy}% Accuracy
+                            </div>
+                        </div>
+                        
+                        <div class="run-stats-grid">
+                            <div class="run-stat-item">
+                                <div class="run-stat-value">${run.claims_count}</div>
+                                <div class="run-stat-label">Total Claims</div>
+                            </div>
+                            <div class="run-stat-item approved">
+                                <div class="run-stat-value">${stats.approved}</div>
+                                <div class="run-stat-label">Approved</div>
+                            </div>
+                            <div class="run-stat-item denied">
+                                <div class="run-stat-value">${stats.denied}</div>
+                                <div class="run-stat-label">Denied</div>
+                            </div>
+                            <div class="run-stat-item uncertain">
+                                <div class="run-stat-value">${stats.uncertain}</div>
+                                <div class="run-stat-label">Uncertain</div>
+                            </div>
+                            <div class="run-stat-item">
+                                <div class="run-stat-value" style="color: #10b981;">${stats.exact_matches}</div>
+                                <div class="run-stat-label">Exact Matches</div>
+                            </div>
+                            <div class="run-stat-item">
+                                <div class="run-stat-value" style="color: #f59e0b;">${stats.acceptable_matches}</div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="flex: 1;">
+                                <button class="view-button">
+                                    View Full Results →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function getAccuracyColor(accuracy) {
+            const percent = accuracy * 100;
+            if (percent === 100) return '#10b981';
+            if (percent >= 80) return '#22c55e';
+            if (percent >= 50) return '#f59e0b';
+            return '#ef4444';
+        }
+        
+        function viewRunDetails(runId) {
+            console.log('viewRunDetails called with runId:', runId);
+            // Load run details and display on this page
+            loadRunDetails(runId);
+        }
+        
+        async function loadRunDetails(runId) {
+            try {
+                console.log('Loading run details for:', runId);
+                const encodedRunId = encodeURIComponent(runId);
+                console.log('Encoded runId:', encodedRunId);
+                const response = await fetch(`/api/results/${encodedRunId}`);
+                console.log('Response status:', response.status);
+                
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    console.error('Response error:', errorText);
+                    throw new Error(`HTTP ${response.status}: ${response.statusText} - ${errorText}`);
+                }
+                
+                const data = await response.json();
+                console.log('Data received, keys:', Object.keys(data));
+                
+                displayResults(data);
+                
+                // Hide runs list and filters, show results
+                document.getElementById('runsList').style.display = 'none';
+                document.querySelector('.filter-section').style.display = 'none';
+                document.querySelector('section.card h2').textContent = `📊 Results for Run ${runId}`;
+                document.getElementById('resultsSection').style.display = 'block';
+                
+            } catch (error) {
+                console.error('Error loading run details:', error);
+                alert(`Failed to load run details: ${error.message}`);
+            }
+        }
+        
+        // Display results
+        function displayResults(summary) {
+            console.log('displayResults called with summary:', summary);
+            console.log('Summary keys:', Object.keys(summary));
+            console.log('Results length:', summary.results ? summary.results.length : 'no results');
+            
+            const resultsSection = document.getElementById('resultsSection');
+            const summaryDiv = document.getElementById('resultsSummary');
+            const resultsGrid = document.getElementById('resultsGrid');
+            
+            // Render summary stats
+            const stats = summary.statistics || {};
+            summaryDiv.innerHTML = `
+                <div class="stat-card approve">
+                    <div class="stat-value">${stats.approved || 0}</div>
+                    <div class="stat-label">Approved</div>
+                </div>
+                <div class="stat-card deny">
+                    <div class="stat-value">${stats.denied || 0}</div>
+                    <div class="stat-label">Denied</div>
+                </div>
+                <div class="stat-card uncertain">
+                    <div class="stat-value">${stats.uncertain || 0}</div>
+                    <div class="stat-label">Uncertain</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${stats.accuracy ? (stats.accuracy * 100).toFixed(1) : 0}%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${stats.exact_matches || 0}</div>
+                    <div class="stat-label">Exact Matches</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${stats.acceptable_matches || 0}</div>
+                    <div class="stat-label">Acceptable</div>
+                </div>
+            `;
+            
+            // Render individual results
+            resultsGrid.innerHTML = '';
+            if (summary.results && Array.isArray(summary.results)) {
+                summary.results.forEach((result, index) => {
+                    console.log(`Processing result ${index}:`, result);
+                    
+                    // Skip results that don't have basic required fields
+                    if (!result || typeof result !== 'object') {
+                        console.warn(`Skipping invalid result at index ${index}`);
+                        return;
+                    }
+                    
+                    const llmDecision = result.llm_decision || {};
+                    const decision = llmDecision.decision || 'UNCERTAIN';
+                    
+                    const confidence = llmDecision.confidence || 0;
+                    const match = result.matches_expected;
+                    
+                    let matchIndicator = '';
+                    if (match) {
+                        if (match.exact_match) {
+                            matchIndicator = '<span style="color: #10b981;">✓ Exact Match</span>';
+                        } else if (match.acceptable_match) {
+                            matchIndicator = '<span style="color: #f59e0b;">≈ Acceptable</span>';
+                        } else {
+                            matchIndicator = '<span style="color: #ef4444;">✗ Mismatch</span>';
+                        }
+                    }
+                    
+                    // Check if Google Search was used
+                    let searchIndicator = '';
+                    if (llmDecision.clinic_verification_enabled && llmDecision.google_search_grounding && llmDecision.google_search_grounding.length > 0) {
+                        const totalSources = llmDecision.google_search_grounding.reduce((sum, g) => 
+                            sum + (g.total_sources || 0), 0
+                        );
+                        searchIndicator = `<span style="color: #10b981; font-size: 0.85rem;">🔍 Verified with ${totalSources} source(s)</span>`;
+                    } else if (llmDecision.clinic_verification_enabled) {
+                        searchIndicator = `<span style="color: #64748b; font-size: 0.85rem;">🔍 Verification enabled</span>`;
+                    }
+                    
+                    const resultItem = document.createElement('div');
+                    resultItem.className = `result-item ${decision.toLowerCase()}`;
+                    resultItem.innerHTML = `
+                        <div class="result-header">
+                            <h3>Claim ${result.claim_number}</h3>
+                            <span class="decision-badge ${decision.toLowerCase()}">${decision}</span>
+                        </div>
+                        <div class="result-content">
+                            <div class="explanation">${llmDecision.explanation || 'No explanation provided'}</div>
+                            <div class="metadata">
+                                <div class="metadata-item">
+                                    <strong>Confidence:</strong> ${(confidence * 100).toFixed(1)}%
+                                </div>
+                                ${llmDecision.compensation_amount ? `
+                                    <div class="metadata-item">
+                                        <strong>Compensation:</strong> ${llmDecision.compensation_amount}
+                                    </div>
+                                ` : ''}
+                                ${matchIndicator ? `
+                                    <div class="metadata-item">
+                                        ${matchIndicator}
+                                    </div>
+                                ` : ''}
+                                ${searchIndicator ? `
+                                    <div class="metadata-item">
+                                        ${searchIndicator}
+                                    </div>
+                                ` : ''}
+                            </div>
+                            ${confidence > 0 ? `
+                                <div class="confidence-bar">
+                                    <div class="confidence-fill" style="width: ${confidence * 100}%"></div>
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                    
+                    resultItem.addEventListener('click', () => showClaimDetails(result));
+                    resultsGrid.appendChild(resultItem);
+                });
+            } else {
+                resultsGrid.innerHTML = '<p>No results available for this run.</p>';
+            }
+        }
+        
+        // Show detailed claim view
+        function showClaimDetails(result) {
+            const modal = document.getElementById('claimModal');
+            const modalBody = document.getElementById('modalBody');
+            
+            const llmDecision = result.llm_decision || {};
+            const decision = llmDecision.decision || 'UNCERTAIN';
+            
+            let detailsHTML = `
+                <h2>Claim ${result.claim_number} - Detailed Analysis</h2>
+                
+                <div class="result-item ${decision.toLowerCase()}" style="margin-top: 20px;">
+                    <div class="result-header">
+                        <h3>Decision</h3>
+                        <span class="decision-badge ${decision.toLowerCase()}">${decision}</span>
+                    </div>
+                    <div class="result-content">
+                        <p><strong>Explanation:</strong> ${llmDecision.explanation || 'No explanation provided'}</p>
+                        ${llmDecision.confidence ? `
+                            <p><strong>Confidence:</strong> ${(llmDecision.confidence * 100).toFixed(1)}%</p>
+                        ` : ''}
+                        ${llmDecision.policy_section ? `
+                            <p><strong>Policy Section:</strong> ${llmDecision.policy_section}</p>
+                        ` : ''}
+                        ${llmDecision.compensation_amount ? `
+                            <p><strong>Compensation Amount:</strong> ${llmDecision.compensation_amount}</p>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+            
+            // Claim description
+            if (result.claim_data && result.claim_data.description) {
+                detailsHTML += `
+                    <div class="preview-section" style="margin-top: 20px;">
+                        <h3>Claim Description</h3>
+                        <p>${result.claim_data.description}</p>
+                    </div>
+                `;
+            }
+            
+            // Display images from the claim
+            if (result.claim_data && result.claim_data.images && result.claim_data.images.length > 0) {
+                detailsHTML += `
+                    <div class="preview-section" style="margin-top: 20px;">
+                        <h3>📸 Claim Documents & Images</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+                `;
+                
+                result.claim_data.images.forEach(img => {
+                    const filename = img.filename || 'Unknown file';
+                    const claimNum = result.claim_number;
+                    detailsHTML += `
+                        <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px; background: white;">
+                            <p style="font-weight: 600; margin-bottom: 8px; color: #1f2937; font-size: 0.875rem;">📄 ${filename}</p>
+                            <img src="/claim-${claimNum}/${encodeURIComponent(filename)}" 
+                                 alt="${filename}"
+                                 style="width: 100%; height: auto; border-radius: 4px; cursor: pointer; max-height: 300px; object-fit: contain;"
+                                 onclick="window.open(this.src, '_blank')"
+                                 onerror="this.parentElement.innerHTML='<p style=\\'color: #6b7280; text-align: center; padding: 20px; font-size: 0.875rem;\\'>📷 Image not available</p>'">
+                        </div>
+                    `;
+                });
+                
+                detailsHTML += `
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Reasoning steps
+            if (llmDecision.reasoning_steps && llmDecision.reasoning_steps.length > 0) {
+                detailsHTML += `
+                    <div class="preview-section" style="margin-top: 20px;">
+                        <h3>Reasoning Steps</h3>
+                        <ol>
+                            ${llmDecision.reasoning_steps.map(step => `<li>${step}</li>`).join('')}
+                        </ol>
+                    </div>
+                `;
+            }
+            
+            // Fraud indicators
+            if (llmDecision.fraud_indicators && llmDecision.fraud_indicators.length > 0) {
+                detailsHTML += `
+                    <div class="fraud-indicator" style="margin-top: 20px;">
+                        <h4>⚠️ Fraud Indicators</h4>
+                        <ul>
+                            ${llmDecision.fraud_indicators.map(indicator => `<li>${indicator}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+            
+            // Clinic verification results (old format - from custom function calls)
+            if (llmDecision.clinic_verification && llmDecision.clinic_verification.length > 0) {
+                detailsHTML += `
+                    <div class="preview-section" style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 8px;">
+                        <h3>🔍 Clinic Verification Results</h3>
+                `;
+                
+                llmDecision.clinic_verification.forEach(verification => {
+                    const result_data = verification.result;
+                    const verified = result_data.verified;
+                    const confidence = result_data.confidence || 0;
+                    
+                    let statusColor = verified === true ? '#10b981' : verified === false ? '#ef4444' : '#f59e0b';
+                    let statusIcon = verified === true ? '✓' : verified === false ? '✗' : '⚠';
+                    let statusText = verified === true ? 'Verified' : verified === false ? 'Not Found' : 'Unknown';
+                    
+                    detailsHTML += `
+                        <div style="margin: 10px 0; padding: 10px; background: white; border-radius: 4px;">
+                            <p><strong>Facility:</strong> ${verification.arguments.facility_name}</p>
+                            ${verification.arguments.location ? `<p><strong>Location:</strong> ${verification.arguments.location}</p>` : ''}
+                            <p><strong>Status:</strong> <span style="color: ${statusColor}; font-weight: bold;">${statusIcon} ${statusText}</span></p>
+                            <p><strong>Confidence:</strong> ${(confidence * 100).toFixed(0)}%</p>
+                            <p><strong>Message:</strong> ${result_data.message}</p>
+                            
+                            ${result_data.search_results && result_data.search_results.length > 0 ? `
+                                <details style="margin-top: 10px;">
+                                    <summary style="cursor: pointer; color: #3b82f6;">View Search Results</summary>
+                                    <ul style="margin-top: 10px;">
+                                        ${result_data.search_results.map(sr => `
+                                            <li style="margin: 8px 0;">
+                                                <a href="${sr.link}" target="_blank" style="color: #3b82f6;">${sr.title}</a>
+                                                <p style="font-size: 0.9rem; color: #64748b; margin: 4px 0 0 0;">${sr.snippet}</p>
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                </details>
+                            ` : ''}
+                        </div>
+                    `;
+                });
+                
+                detailsHTML += `</div>`;
+            }
+            
+            // Google Search Grounding results
+            if (llmDecision.google_search_grounding && llmDecision.google_search_grounding.length > 0) {
+                detailsHTML += `
+                    <div class="google-search-section" style="margin-top: 20px; padding: 20px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 4px;">
+                        <h3 style="color: #0284c7; margin-top: 0;">🔍 Google Search Results</h3>
+                        <p style="color: #64748b;">The LLM used Google Search to verify information in this claim.</p>
+                `;
+                
+                llmDecision.google_search_grounding.forEach((grounding, idx) => {
+                    if (grounding.search_performed) {
+                        detailsHTML += `<div style="margin: 15px 0; padding: 12px; background: white; border-radius: 6px;">`;
+                        detailsHTML += `<h4 style="margin: 0 0 10px 0; color: #10b981;">Search Session ${idx + 1}</h4>`;
+                        
+                        // Show search entry point if available
+                        if (grounding.search_entry_point) {
+                            detailsHTML += `
+                                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 10px;">
+                                    <strong>Search Query:</strong> ${grounding.search_entry_point.rendered_content || 'N/A'}
+                                </p>
+                            `;
+                        }
+                        
+                        // Show grounding chunks (search results)
+                        if (grounding.grounding_chunks && grounding.grounding_chunks.length > 0) {
+                            detailsHTML += `
+                                <p style="margin: 10px 0 5px 0;"><strong>Sources Found (${grounding.total_sources || grounding.grounding_chunks.length}):</strong></p>
+                                <ul style="list-style: none; padding: 0; margin: 10px 0;">
+                            `;
+                            
+                            grounding.grounding_chunks.forEach((chunk, chunkIdx) => {
+                                detailsHTML += `
+                                    <li style="margin: 8px 0; padding: 10px; background: #f8fafc; border-left: 3px solid #10b981; border-radius: 4px;">
+                                        <div style="font-weight: 500; color: #1e293b; margin-bottom: 4px;">
+                                            ${chunk.title || `Source ${chunkIdx + 1}`}
+                                        </div>
+                                        ${chunk.uri ? `
+                                            <a href="${chunk.uri}" target="_blank" style="color: #3b82f6; font-size: 0.85rem; word-break: break-all;">
+                                                ${chunk.uri}
+                                            </a>
+                                        ` : ''}
+                                    </li>
+                                `;
+                            });
+                            
+                            detailsHTML += `</ul>`;
+                        }
+                        
+                        // Show grounding supports (which parts of the response used search)
+                        if (grounding.grounding_support && grounding.grounding_support.length > 0) {
+                            detailsHTML += `
+                                <details style="margin-top: 12px;">
+                                    <summary style="cursor: pointer; color: #3b82f6; font-size: 0.9rem;">
+                                        📝 View claims backed by search (${grounding.grounding_support.length})
+                                    </summary>
+                                    <div style="margin-top: 10px; padding-left: 10px;">
+                            `;
+                            
+                            grounding.grounding_support.forEach((support, supportIdx) => {
+                                if (support.text) {
+                                    const sourceIndices = support.chunk_indices ? 
+                                        support.chunk_indices.map(i => i + 1).join(', ') : 'N/A';
+                                    detailsHTML += `
+                                        <div style="margin: 8px 0; padding: 8px; background: #fefce8; border-left: 3px solid #eab308; border-radius: 4px;">
+                                            <p style="margin: 0 0 4px 0; font-size: 0.9rem;">"${support.text}"</p>
+                                            <p style="margin: 0; font-size: 0.8rem; color: #64748b;">
+                                                Supported by source(s): ${sourceIndices}
+                                            </p>
+                                        </div>
+                                    `;
+                                }
+                            });
+                            
+                            detailsHTML += `
+                                    </div>
+                                </details>
+                            `;
+                        }
+                        
+                        detailsHTML += `</div>`;
+                    }
+                });
+                
+                detailsHTML += `</div>`;
+            }
+            
+            // Image metadata
+            if (result.image_metadata && result.image_metadata.length > 0) {
+                detailsHTML += `
+                    <div class="preview-section" style="margin-top: 20px;">
+                        <h3>🔍 Document Analysis Results</h3>
+                `;
+                
+                result.image_metadata.forEach(img => {
+                    const metadata = img.metadata;
+                    const filename = img.filename;
+                    const claimNum = result.claim_number;
+                    
+                    detailsHTML += `
+                        <div class="image-metadata" style="margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                                <h4 style="margin: 0;">📄 ${filename}</h4>
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px;">
+                                <div>
+                                    <img src="/claim-${claimNum}/${encodeURIComponent(filename)}" 
+                                         alt="${filename}"
+                                         style="width: 100%; height: auto; border-radius: 4px; border: 1px solid #e5e7eb; cursor: pointer;"
+                                         onclick="window.open(this.src, '_blank')"
+                                         onerror="this.style.display='none'">
+                                </div>
+                                <div>
+            `;
+                    
+                    if (metadata.document_type) {
+                        detailsHTML += `<p><strong>Type:</strong> ${metadata.document_type}</p>`;
+                    }
+                    
+                    if (metadata.language) {
+                        detailsHTML += `<p><strong>Language:</strong> ${metadata.language}</p>`;
+                    }
+                    
+                    if (metadata.authenticity_indicators) {
+                        const auth = metadata.authenticity_indicators;
+                        detailsHTML += `
+                            <p><strong>Authenticity:</strong></p>
+                            <ul style="margin: 5px 0 10px 20px;">
+                                <li>Signature: ${auth.has_signature ? '✓' : '✗'}</li>
+                                <li>Official Stamp: ${auth.has_official_stamp ? '✓' : '✗'}</li>
+                                <li>Letterhead: ${auth.has_letterhead ? '✓' : '✗'}</li>
+                                ${auth.quality_assessment ? '<li>Quality: ' + auth.quality_assessment + '</li>' : ''}
+                            </ul>
+                        `;
+                    }
+                    
+                    if (metadata.key_information) {
+                        detailsHTML += `
+                            <details style="margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: 600; color: #3b82f6;">View Extracted Information</summary>
+                                <pre style="background: #f9fafb; padding: 10px; border-radius: 4px; margin-top: 10px; font-size: 0.85rem; overflow-x: auto;">${JSON.stringify(metadata.key_information, null, 2)}</pre>
+                            </details>
+                        `;
+                    }
+                    
+                    if (metadata.text_content) {
+                        detailsHTML += `
+                            <details style="margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: 600; color: #3b82f6;">View Full Extracted Text</summary>
+                                <div style="background: #f9fafb; padding: 10px; border-radius: 4px; max-height: 300px; overflow-y: auto; margin-top: 10px;">
+                                    <pre style="white-space: pre-wrap; font-size: 0.85rem; margin: 0;">${metadata.text_content}</pre>
+                                </div>
+                            </details>
+                        `;
+                    }
+                    
+                    detailsHTML += `
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                detailsHTML += `</div>`;
+            }
+            
+            // Expected answer comparison
+            if (result.expected_answer) {
+                const match = result.matches_expected;
+                detailsHTML += `
+                    <div class="preview-section" style="margin-top: 20px;">
+                        <h3>Expected Answer Comparison</h3>
+                        <p><strong>Expected:</strong> ${result.expected_answer.decision}</p>
+                        ${result.expected_answer.explanation ? `
+                            <p><strong>Expected Explanation:</strong> ${result.expected_answer.explanation}</p>
+                        ` : ''}
+                        <p><strong>Actual:</strong> ${decision}</p>
+                        <p><strong>Match:</strong> 
+                            ${match.exact_match ? 
+                                '<span style="color: #10b981;">✓ Exact Match</span>' : 
+                                match.acceptable_match ? 
+                                    '<span style="color: #f59e0b;">≈ Acceptable Match</span>' : 
+                                    '<span style="color: #ef4444;">✗ Mismatch</span>'
+                            }
+                        </p>
+                    </div>
+                `;
+            }
+            
+            modalBody.innerHTML = detailsHTML;
+            modal.style.display = 'block';
+        }
+    </script>
+    {% endraw %}
+</body>
+</html>
