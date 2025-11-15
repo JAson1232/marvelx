@@ -70,7 +70,7 @@ Claims will be DENIED for:
 
 [document_validation]
 medical_certificates = """
-⚠️ CRITICAL FILE TYPE CHECK (CHECK THIS FIRST):
+CRITICAL FILE TYPE CHECK (CHECK THIS FIRST):
 Medical certificates MUST be IMAGE FILES (jpg, jpeg, png, webp, etc.)
 
 IMMEDIATELY DENY if medical documentation is provided as:
@@ -142,7 +142,7 @@ CLINIC/HOSPITAL VERIFICATION (When Enabled):
 
 When clinic verification is enabled, you have access to Google Search grounding to verify medical facilities mentioned in medical certificates or claim descriptions.
 
-⚠️ CRITICAL RULE: DO NOT FABRICATE OR MAKE UP CLINIC NAMES
+CRITICAL RULE: DO NOT FABRICATE OR MAKE UP CLINIC NAMES
 - ONLY verify facilities that are EXPLICITLY mentioned in the documents
 - If you CANNOT extract a clear, specific facility name, DO NOT attempt verification
 - DO NOT guess or infer facility names from partial information
@@ -155,11 +155,11 @@ When to Use Search:
 - You want to confirm the facility's location matches the claim
 
 When NOT to Use Search:
-- ❌ Facility name is unclear, partial, or illegible
-- ❌ Only general location is mentioned (e.g., "a hospital in Paris")
-- ❌ Certificate doesn't specify the facility name
-- ❌ You're uncertain about the exact facility name
-- ❌ Would need to guess or make assumptions
+- Facility name is unclear, partial, or illegible
+- Only general location is mentioned (e.g., "a hospital in Paris")
+- Certificate doesn't specify the facility name
+- You're uncertain about the exact facility name
+- Would need to guess or make assumptions
 
 How Search Works:
 - Simply mention the EXACT medical facility name from the document
@@ -168,12 +168,12 @@ How Search Works:
 - You can make MULTIPLE searches during your analysis as needed
 
 What to Look For:
-✅ Facility exists and is a real medical institution
-✅ Location matches what's in the certificate
-✅ Type of facility matches (hospital vs clinic vs doctor's office)
-✅ Has reviews, website, or other legitimate presence
+Facility exists and is a real medical institution
+Location matches what's in the certificate
+Type of facility matches (hospital vs clinic vs doctor's office)
+Has reviews, website, or other legitimate presence
 
-🚩 Red Flags (Only if you successfully verified):
+Red Flags (Only if you successfully verified):
 - No search results found for the explicitly mentioned facility name
 - Facility exists but in wrong location/country
 - Facility is residential address or suspicious location
@@ -259,7 +259,7 @@ You MUST analyze the relationship between:
 FUTURE EVENT ASSESSMENT (CRITICAL):
 When the travel/booking date is in the FUTURE relative to "current date":
 
-⚠️ CANNOT ASSUME future recovery status for events weeks/months away
+CANNOT ASSUME future recovery status for events weeks/months away
 - If medical condition is ONGOING/CURRENT and travel is >2 weeks away → UNCERTAIN
 - If hospitalization status is "currently admitted" but travel is weeks away → UNCERTAIN  
 - Cannot predict whether person will STILL be unable to travel weeks/months from now
