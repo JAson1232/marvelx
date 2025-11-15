@@ -1,0 +1,92 @@
+{
+  "claim_number": 16,
+  "timestamp": "2025-11-15T01:40:44.546628",
+  "claim_data": {
+    "description": "A causa di un ricovero ospedaliero urgente il 14 aprile 2017 presso l'Ospedale Renzetti di Lanciano, non sono riuscita a utilizzare il biglietto ferroviario acquistato per quello stesso giorno.\n\nAllego alla presente il certificato di ricovero a supporto della mia richiesta.\n\nChiedo gentilmente il rimborso.\n",
+    "documents": [
+      {
+        "filename": "internal train data.md",
+        "content": "**Current date is: 2017-05-11**\n\n**Name**: Piccirilly Francesca  \n**Booking Ref**: TRN-55218829  \n**Price**: \u20ac38  \n**Train**: Frecciarossa 9522  \n**Operator**: Trenitalia  \n**Departure**: 2017-04-14 17:10 (local)  \n**From**: Pescara Centrale  \n**To**: Milano Centrale  \n**Seat**: Car 5, Seat 12A (Standard Class)  \n**Fare Type**: Economy  \n**Booked on**: 2017-03-24 16:48  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Italian_medical_1.jpg",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "PICCIRILLI FRANCESCA"
+          ],
+          "dates": [
+            "30-07-1980",
+            "14-04-2017",
+            "18-04-2017"
+          ],
+          "amounts": [],
+          "locations": [
+            "GERMANIA (EE)",
+            "LANCIANO (CH)",
+            "VIA FOLLANI",
+            "303"
+          ],
+          "organizations": [
+            "Regione Abruzzo",
+            "Azienda Sanitaria Locale N. 2 Lanciano",
+            "P.O. \"Renzetti\"",
+            "Ospedale"
+          ]
+        },
+        "text_content": "Regione Abruzzo\nAzienda Sanitaria Locale N. 2 Lanciano\nP.O. \"Renzetti\"\n\nCERTIFICATO DI RICOVERO\n\nSi Attesta che PICCIRILLI FRANCESCA nata il 30-07-1980 a GERMANIA (EE) e residente a\nLANCIANO (CH), indirizzo VIA FOLLANI n\u00ba 303 \u00e8 stata ricoverata in questo Ospedale il 14-04-2017\ndimesso il 14-04-2017\n\nSi rilascia il presente certificato, su richiesta dell'interessato, per gli usi consentiti dalla legge.\nNOTE:\n\nLanciano l\u00ec, 18-04-2017\n\nIL MEDICO DEL REPARTO\n(timbro e firma)",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": true,
+          "has_letterhead": true,
+          "quality_assessment": "The document has a visible stamp and signature. The text is clear and legible. It is on letterhead from Regione Abruzzo."
+        },
+        "fraud_concerns": [],
+        "language": "Italian",
+        "ocr_extraction": {
+          "text": "",
+          "error": "OCR failed: (1, 'Corrupt JPEG data: premature end of data segment Error in pixReadStreamJpeg: read error at scanline 1262; nwarn = 1 Error in pixReadStreamJpeg: bad data Error in pixReadStream: jpeg: no pix returned Leptonica Error in pixRead: pix not read: /var/folders/xr/ynbnmsw90rz1p_9l5v61v2sr0000gn/T/tess_1nwd7awp_input.JPEG Error during processing.')",
+          "success": false
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "APPROVE",
+    "explanation": "The claim is approved because the claimant, Piccirilli Francesca, was hospitalized on April 14, 2017, the same day as her train ticket. The provided medical certificate from Azienda Sanitaria Locale N. 2 Lanciano P.O. \"Renzetti\" confirms her hospitalization on that date. The certificate has a visible stamp and signature, and the name on the certificate matches the claimant's name. The train ticket also confirms the booking details. The current date is 2017-05-11, which is within 30 days of the policy expiration. The hospitalization prevents her from using the train ticket on the scheduled date.",
+    "confidence": 0.95,
+    "policy_section": "Trip Cancellation - Medical emergency",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Medical certificate",
+      "Train ticket booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": "\u20ac38",
+    "reasoning_steps": [
+      "Verified that the medical certificate is an image file.",
+      "Confirmed that the medical certificate has a signature and stamp.",
+      "Verified that the name on the medical certificate (Piccirilli Francesca) matches the claimant's name.",
+      "Confirmed that the hospitalization date (14-04-2017) is the same as the train ticket date (14-04-2017).",
+      "Verified that the medical certificate is from a legitimate medical facility (Azienda Sanitaria Locale N. 2 Lanciano P.O. \"Renzetti\").",
+      "Confirmed that the claim was submitted within the allowed timeframe.",
+      "Analyzed the timeline and determined that the hospitalization on the day of travel justifies the cancellation.",
+      "Determined that no fraud indicators are present."
+    ]
+  },
+  "expected_answer": {
+    "decision": "APPROVE"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "APPROVE",
+    "acceptable_alternative": null,
+    "actual": "APPROVE"
+  }
+}

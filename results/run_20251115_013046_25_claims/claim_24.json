@@ -1,0 +1,99 @@
+{
+  "claim_number": 24,
+  "timestamp": "2025-11-15T01:45:41.843745",
+  "claim_data": {
+    "description": "To whom it may concern,\n\nI am writing to request a refund for a train journey I was unable to take on February 2, 2017, due to a medical issue that worsened the day before travel.\n\nWhile I did not seek medical attention immediately, the following day I visited the Hospital General Docente Calder\u00f3n in Quito and was diagnosed with sinusitis (ICD-10: J66). I had been experiencing symptoms for several days, but on the morning of the trip, I felt too unwell to travel and made the difficult decision to stay home.\n\nThe medical certificate issued by Dr. Elizabeth Cueva confirms my condition and the consultation on February 5, 2017. I understand the appointment was not on the same day as the scheduled trip, but I hope you will consider the documentation as valid support for my request. The illness clearly impacted my ability to travel.\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2017-02-21**\n\n**Name**: GUANOTU\u00d1A TOALOMBO JORDY STALIN  \n**Booking Ref**: TRN-11047622  \n**Price**: \u20ac29  \n**Train**: Tren Ecuador Expreso 302  \n**Operator**: Empresa de Ferrocarriles Ecuatorianos  \n**Departure**: 2017-02-02 08:00 (local)  \n**From**: Quito  \n**To**: Riobamba  \n**Seat**: Coach B, Seat 7A  \n**Fare Type**: Turista  \n**Booked on**: 2017-01-05 15:46  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Spanish_medical_12.webp",
+      "metadata": {
+        "document_type": "medical certificate",
+        "key_information": {
+          "names": [
+            "GUANOTU\u00d1A TOALOMBO JORDY STALIN",
+            "ELIZABETH CUEVA"
+          ],
+          "dates": [
+            "05 de febrero del 2017",
+            "11:45 AM",
+            "1:30 PM"
+          ],
+          "amounts": [
+            "1410",
+            "1751406131"
+          ],
+          "locations": [
+            "Quito"
+          ],
+          "organizations": [
+            "HOSPITAL GENERAL DOCENTE CALDERON",
+            "Ministerio de Salud P\u00fablica"
+          ]
+        },
+        "text_content": "MP\nMinisterio\nde Salud P\u00fablica\nHOSPITAL GENERAL DOCENTE CALDERON\n\nCERTIFICADO MEDICO\nQuito, 05 de febrero del 2017\n\nCertifico, que la se\u00f1or: GUANOTU\u00d1A TOALOMBO JORDY\nSTALIN, con numero de cedula: 1751406131, con HCL\n1410, acude al, HOSPITAL GENERAL DOCENTE\nCALDERON HIERRO a la \u00e1rea de MEDICINA GENERAL,\ncon diagn\u00f3stico de SINUSITIS CIE 10 (J 66), finalidad de\ndar a conocer que la paciente tuvo cita desde las 11:45 AM\nhasta las 1:30 PM Ministerio\nde Salud Publica\nHOSPITAL GENERAL DOCENTE CALDERON\nOSPITAL DOCENTE CALDERIN\nMED, GENERAL\nDra Elizabeth\nDra. ELIZABETH CUEVA\nHOSPITAL GENERAL DOCENTE CALDERON",
+        "authenticity_indicators": {
+          "has_signature": false,
+          "has_official_stamp": false,
+          "has_letterhead": true,
+          "quality_assessment": "Good. The text is clear and readable. The image quality is good."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "Minit HOSPITAL GENERAL DOCENTE CALDERON\nso Salud P\u00fablica\n\nCERTIFICADO MEDICO\nQuito, 05 de febrero del 2017\n\nCertifico, que la se\u00f1or: GUANOTU\u00d1A TOALOMBO JORDY\nSTALIN, con numero de cedula: 1751406131, con HCL\n1410,acude al, HOSPITAL GENERAL DOCENTE\nCALDERON HIERRO a la \u00e1rea de MEDICINA GENERAL ,\ncon diagn\u00f3stico de SINUSITIS CIE 10 (J 66), finalidad de\ndar a conocer que la paciente tuvo cita desde las 11:45 AM\nhasta las 1:30 PM\n\nDra. ELIZABETH CUEVA\nHOSPITAL GENERAL DOCENTE CALDERON",
+          "confidence": 68.62037037037037,
+          "languages_used": [
+            "eng",
+            "spa"
+          ],
+          "word_count": 78,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The medical certificate is an image file, which is acceptable. However, the certificate lacks a visible signature from a medical professional. The name 'Dra. ELIZABETH CUEVA' is typed, but there is no physical signature present on the document. Additionally, the claim is for a train journey on February 2, 2017, but the medical certificate is dated February 5, 2017, indicating the claimant did not seek medical attention until after the scheduled travel. While the certificate states the claimant was diagnosed with sinusitis (ICD-10: J66), the absence of a signature and the delayed medical consultation raise concerns about the validity of the claim. The claimant states they felt unwell on the day of travel, but the medical certificate was issued three days later. The absence of a signature is a critical issue. The metadata also confirms that there is no signature.",
+    "confidence": 0.9,
+    "policy_section": "Trip Cancellation - Medical emergency",
+    "fraud_indicators": [
+      "Missing signature on medical certificate",
+      "Delayed medical consultation (3 days after scheduled travel)"
+    ],
+    "required_documents": [
+      "Medical certificate",
+      "Proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "Checked that the medical certificate is an image file.",
+      "Verified that the claimant's name on the certificate matches the name in the claim description.",
+      "Identified that the medical certificate is dated February 5, 2017, while the train journey was scheduled for February 2, 2017.",
+      "Confirmed the absence of a physical signature on the medical certificate.",
+      "Concluded that the missing signature and delayed consultation raise concerns about the claim's validity.",
+      "Determined that the claim should be denied due to the missing signature and the temporal discrepancy."
+    ]
+  },
+  "expected_answer": {
+    "decision": "UNCERTAIN",
+    "explanation": "minor date problem - appointment is 3 days after the flight",
+    "acceptable_decision": "APPROVE"
+  },
+  "matches_expected": {
+    "exact_match": false,
+    "acceptable_match": false,
+    "expected": "UNCERTAIN",
+    "acceptable_alternative": "APPROVE",
+    "actual": "DENY"
+  }
+}

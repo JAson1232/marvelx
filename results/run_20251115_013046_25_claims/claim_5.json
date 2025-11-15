@@ -1,0 +1,89 @@
+{
+  "claim_number": 5,
+  "timestamp": "2025-11-15T01:33:35.657605",
+  "claim_data": {
+    "description": "Hi there,\n\nI\u2019m writing to explain why I had to cancel my flight on such short notice.\n\nOn October 31st, I suddenly felt really shitty while at work at the retirement home (Casa di Riposo Sant\u2019Anna). I left around 12:30 PM and was checked out by the doctor on site, Dr. Lucini Cristina. She confirmed I wasn\u2019t in a condition to keep working or travel and told me to follow up with my own doctor. I've attached her note here.\n\nUnfortunately, my flight to Palermo was scheduled for the next morning, and I just wasn\u2019t physically up for it. I had to cancel the whole trip. I\u2019m hoping this qualifies under the medical emergency clause of my travel insurance.\n\nThanks in advance for your help,  \nOlivier Bayante\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2011-11-05**\n\n**Name**: Olivier Bayante  \n**Booking Ref**: AZ88124933  \n**Operator**: Alitalia  \n**Departure**: 2011-11-01 08:10 (local)  \n**From**: Milano Linate Airport (LIN)  \n**To**: Palermo Falcone\u2013Borsellino Airport (PMO)  \n**Fare Type**: Economy Light  \n**Ticket Price**: \u20ac142 (paid)  \n**Booked on**: 2011-10-10 16:08  ",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Italian_medical_2a.jpg",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "Benfants Oliviers",
+            "Licini Cristina"
+          ],
+          "dates": [
+            "31. X. 2011"
+          ],
+          "amounts": [],
+          "locations": [
+            "Covozo",
+            "CUAYOPIA"
+          ],
+          "organizations": [
+            "FONDAZIONE CASA DI RICOVERO SANTA MARIA AUSILIATRICE ONLUS"
+          ]
+        },
+        "text_content": "31. X. 2011\nSi certifica che il\nSij. Benfants Oliviers,\nlosis il pario di Covozo\nalle ore 12.30 Comevendo\nCoxelgia acuta.\nSi vive al cureure.\nFONDAZIONE\nCASA DE RICOVERO\nSANTA MARIA AUSILIATRICE\nONLUS\n(LICINI CRISTINA-MEDICO AV\nCUAYOPIA)",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": true,
+          "has_letterhead": true,
+          "quality_assessment": "The document is handwritten and slightly faded. The text is legible but some words are unclear. There is a signature and official stamp."
+        },
+        "fraud_concerns": [
+          "Handwritten document, making verification more difficult.",
+          "Unclear spelling of some words may be a sign of forgery."
+        ],
+        "language": "Italian",
+        "ocr_extraction": {
+          "text": "",
+          "error": "OCR failed: (1, 'Corrupt JPEG data: premature end of data segment Error in pixReadStreamJpeg: read error at scanline 430; nwarn = 1 Error in pixReadStreamJpeg: bad data Error in pixReadStream: jpeg: no pix returned Leptonica Error in pixRead: pix not read: /var/folders/xr/ynbnmsw90rz1p_9l5v61v2sr0000gn/T/tess_z47lkods_input.JPEG Error during processing.')",
+          "success": false
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The medical certificate provided is an image file, which is acceptable. However, the name on the medical certificate, \"Benfants Oliviers\", does not match the claimant's name, \"Olivier Bayante\". While the OCR is imperfect and the document is handwritten, the name is clearly legible enough to determine a mismatch. This constitutes a Priority 1 fraud indicator. Additionally, the medical certificate is difficult to read and contains some unclear words, which raises further concerns about its authenticity. The flight was scheduled for 2011-11-01, and the medical certificate is dated 2011-10-31, which is acceptable from a temporal perspective, but the name mismatch is a critical issue.",
+    "confidence": 0.9,
+    "policy_section": "Trip Cancellation - Medical emergency",
+    "fraud_indicators": [
+      "Name on medical certificate does not match claimant's name"
+    ],
+    "required_documents": [
+      "Medical certificate",
+      "Proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "Checked that the medical certificate is an image file.",
+      "Extracted the claimant's name from the claim description: Olivier Bayante.",
+      "Extracted the patient's name from the medical certificate: Benfants Oliviers.",
+      "Compared the names and found a clear mismatch.",
+      "Identified the name mismatch as a Priority 1 fraud indicator.",
+      "Determined that the claim should be denied due to the name mismatch."
+    ]
+  },
+  "expected_answer": {
+    "decision": "APPROVE"
+  },
+  "matches_expected": {
+    "exact_match": false,
+    "acceptable_match": null,
+    "expected": "APPROVE",
+    "acceptable_alternative": null,
+    "actual": "DENY"
+  }
+}

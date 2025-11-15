@@ -1,0 +1,88 @@
+{
+  "claim_number": 22,
+  "timestamp": "2025-11-15T01:44:22.611176",
+  "claim_data": {
+    "description": "Estimados,\n\nMe comunico con ustedes para solicitar el reembolso de un boleto de tren que no pude utilizar el d\u00eda **19 de octubre de 2015**.\n\nEse mismo d\u00eda acud\u00ed a una revisi\u00f3n m\u00e9dica en el centro de salud UMAPS Santo Tom\u00e1s Huatzindeo, en Salvatierra, Guanajuato. Como consta en el certificado m\u00e9dico que adjunto a esta solicitud, fui evaluado por personal autorizado y se me emiti\u00f3 constancia de hallarme en perfecto estado de salud.\n\nDado que el proceso tom\u00f3 m\u00e1s tiempo de lo previsto y era necesario completar ciertos requisitos legales personales, me fue imposible llegar a tiempo a la estaci\u00f3n y abordar el tren. Por lo tanto, solicito atentamente el reembolso del boleto no utilizado.\n\nAgradezco de antemano su comprensi\u00f3n y quedo a su disposici\u00f3n para cualquier informaci\u00f3n adicional.\n\nAtentamente,\nJos\u00e9\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2015-11-11**\n\n**Nombre**: Jos\u00e9 Juan Robledo Romero  \n**Referencia de Reserva**: TRN-99563744  \n**Precio**: \u20ac37  \n**Tren**: ETN Primera Plus 1026  \n**Operador**: Primera Plus  \n**Salida**: 2015-10-19 11:45 (hora local)  \n**Desde**: Celaya, GTO  \n**Hacia**: Guadalajara, JAL  \n**Asiento**: 10B (Primera Clase)  \n**Tipo de Tarifa**: Regular  \n**Reservado el**: 2015-10-10 14:32  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Spanish_medical_10.jpeg",
+      "metadata": {
+        "document_type": "medical certificate",
+        "key_information": {
+          "names": [
+            "Jos\u00e9 Juan Robledo Romero",
+            "Cervantes Flores Cristina"
+          ],
+          "dates": [
+            "Octubre del 2015",
+            "19 d\u00edas"
+          ],
+          "amounts": [],
+          "locations": [
+            "Salvatierra, Guanajuato",
+            "Santo Tomas Huatzindeo"
+          ],
+          "organizations": [
+            "UMAPS",
+            "SECRETAR\u00cdA DE SALUD"
+          ]
+        },
+        "text_content": "SALUD\nSECRETAR\u00cdA DE SALUD\nCERTIFICADO MEDICO\nAQUIEN CORRESPONDA:\ngto\nergullo y\nde todos\nSecretar\u00eda\nPor medio de la presente hago constar que el C. Jos\u00e9 Juan Robledo\nRomero se encuentra en Prefecto estado de Salud siendo su diagn\u00f3stico\nSANO.\nSe extiende la presente a petici\u00f3n del interesado y para los fines legales\nque juzgue convenientes, en la ciudad de Salvatierra, Guanajuato; a los\n19 d\u00edas del mes de Octubre del 2015.\nATENTAMENTE:\nM.P.S.S. Cervantes Flores Cristina\nResponsable del UMAPS Santo Tomas Huatzindeo.\nUMAPS SANTO TOMAS HUATZINDEO SALVATIERRA GUANAUJUATO, REFORMA # 13 TEL: 014665-50-60",
+        "authenticity_indicators": {
+          "has_signature": false,
+          "has_official_stamp": true,
+          "has_letterhead": true,
+          "quality_assessment": "Good quality, clear text and logos."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "",
+          "error": "OCR failed: (1, 'Corrupt JPEG data: premature end of data segment Error in pixReadStreamJpeg: read error at scanline 974; nwarn = 1 Error in pixReadStreamJpeg: bad data Error in pixReadStream: jpeg: no pix returned Leptonica Error in pixRead: pix not read: /var/folders/xr/ynbnmsw90rz1p_9l5v61v2sr0000gn/T/tess_7672b329_input.JPEG Error during processing.')",
+          "success": false
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The medical certificate states that Jos\u00e9 Juan Robledo Romero is in perfect health (SANO). This contradicts the claim that a medical review prevented him from using the train ticket. Therefore, the claim is denied because the provided documentation does not support the reason for cancellation. Additionally, the medical certificate does not have a visible signature, which is a strong indicator for denial. The claimant was found to be in perfect health, so the claim is not covered under the policy.",
+    "confidence": 1.0,
+    "policy_section": "Trip Cancellation",
+    "fraud_indicators": [],
+    "required_documents": [
+      "medical certificate",
+      "proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "1. Reviewed the claim description and supporting documents.",
+      "2. Extracted the claimant's name (Jos\u00e9 Juan Robledo Romero) and the date of the train ticket (October 19, 2015).",
+      "3. Analyzed the medical certificate and confirmed that the name on the certificate matches the claimant's name.",
+      "4. Identified that the medical certificate states the patient is in perfect health (SANO).",
+      "5. Determined that the medical certificate contradicts the reason for the claim (medical review preventing travel).",
+      "6. Noted that the medical certificate lacks a visible signature.",
+      "7. Concluded that the claim should be denied because the documentation does not support the claim reason and the medical certificate states the patient is healthy."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "the medical certificate states the person is healthy"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "DENY",
+    "acceptable_alternative": null,
+    "actual": "DENY"
+  }
+}

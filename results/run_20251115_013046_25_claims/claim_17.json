@@ -1,0 +1,91 @@
+{
+  "claim_number": 17,
+  "timestamp": "2025-11-15T01:41:21.289193",
+  "claim_data": {
+    "description": "Por motivos m\u00e9dicos, no pude asistir a la competencia deportiva para la cual me hab\u00eda registrado.\n\nAdjunto constancia m\u00e9dica emitida por el Hospital Universitario Ruiz y P\u00e1ez, donde se certifica mi estado de salud posterior a un chequeo general.\n\nSolicito amablemente el reembolso o un cr\u00e9dito para futuros eventos.\n",
+    "documents": [
+      {
+        "filename": "internal ticket data.md",
+        "content": "**Current date is: 2024-3-22**\n\n**Name**: Luis Angel Duque  \n**Booking Ref**: EVT-77201844  \n**Price**: $29 (paid)  \n**Event**: Carrera 10K Ciudad Bol\u00edvar  \n**Venue**: Plaza Bol\u00edvar, Ciudad Bol\u00edvar  \n**Event Date**: 2024-03-03 07:30 (local)  \n**Bib Number**: 1418  \n**Ticket Type**: General Participant  \n**Registered on**: 2024-02-01 16:55  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Spanish_medical_16.webp",
+      "metadata": {
+        "document_type": "medical certificate",
+        "key_information": {
+          "names": [
+            "Luis Angel Duque"
+          ],
+          "dates": [],
+          "amounts": [
+            "25.781.084",
+            "17"
+          ],
+          "locations": [
+            "Ciudad Bol\u00edvar - Edo. Bol\u00edvar"
+          ],
+          "organizations": [
+            "Hospital Universitario Ruiz y P\u00e1ez"
+          ]
+        },
+        "text_content": "Hospital Universitario Ruiz y P\u00e1ez\nFecha:\nMedicina Interna\nCiudad Bol\u00edvar - Edo. Bol\u00edvar\nCONSTANCIA M\u00c9DICA\nA quien pueda interesar\nPor medio de la presente hago constar que el ciudadano Luis Angel Duque\nde 17 a\u00f1os de edad, portador de la cedula de identidad v- 25.781.084;\ndespu\u00e9s de haberle realizado el examen m\u00e9dico general; se encuentra en\nbuenas condiciones cl\u00ednicas, apto para actividad f\u00edsica de cualquier tipo.\nConstancia que se expide a petici\u00f3n de la persona interesada\nDatos del M\u00e9dico Tratante:",
+        "authenticity_indicators": {
+          "has_signature": false,
+          "has_official_stamp": false,
+          "has_letterhead": true,
+          "quality_assessment": "Good quality, clear text."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "Hospital Universitario Ruiz y P\u00e1ez\nFecha:\n\nMedicina Interna\n\nCiudad Bol\u00edvar - Edo. Bol\u00edvar\n\nCONSTANCIA M\u00c9DICA\n\nA quien pueda interesar\n\nPor medio de la presente hago constar que el ciudadano Luis Angel Duque\nde 17 a\u00f1os de edad, portador de la cedula de identidad v- 25.781.084;\ndespu\u00e9s de haberle realizado el examen m\u00e9dico general; se encuentra en\nbuenas condiciones cl\u00ednicas, apto para actividad f\u00edsica de cualquier tipo.\n\nConstancia que se expide a petici\u00f3n de la persona interesada\n\nDatos del M\u00e9dico Tratante:",
+          "confidence": 65.97435897435898,
+          "languages_used": [
+            "eng",
+            "spa"
+          ],
+          "word_count": 80,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The medical certificate states that Luis Angel Duque is in good clinical condition and fit for physical activity of any kind. This contradicts the claim that he was unable to attend the sporting event due to medical reasons. Additionally, the medical certificate lacks a signature and official stamp, and the event date (2024-03-03) is in the past relative to the current date (2024-03-22).",
+    "confidence": 1.0,
+    "policy_section": "Trip Cancellation",
+    "fraud_indicators": [],
+    "required_documents": [
+      "medical certificate",
+      "proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "1. Reviewed the claim description and supporting documents.",
+      "2. Verified that the medical certificate is an image file.",
+      "3. Extracted the claimant's name from the claim description and confirmed it matches the name on the medical certificate.",
+      "4. Analyzed the medical certificate content and identified that it states the claimant is in good health and fit for physical activity.",
+      "5. Noted the absence of a signature and official stamp on the medical certificate.",
+      "6. Compared the event date (2024-03-03) with the current date (2024-03-22) and determined that the event has already occurred.",
+      "7. Concluded that the medical certificate contradicts the claim and lacks necessary authentication elements.",
+      "8. Determined that the claim should be denied based on the medical certificate stating the claimant is healthy and the lack of signature/stamp."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "documentation states the claimant is in good condition, lacks a signature"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "DENY",
+    "acceptable_alternative": null,
+    "actual": "DENY"
+  }
+}

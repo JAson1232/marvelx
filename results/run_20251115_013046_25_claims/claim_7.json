@@ -1,0 +1,92 @@
+{
+  "claim_number": 7,
+  "timestamp": "2025-11-15T01:34:51.955365",
+  "claim_data": {
+    "description": "Hi,\n\nI'm submitting this claim because my mom, Gloria Mi Nano Reyna, had to cancel her flight scheduled for September 13. She had been hospitalized at Cl\u00ednica S\u00e1nchez Ferrer starting August 13 and only just got discharged after we were supposed to leave.\n\nEven though we were hoping she\u2019d recover in time, her condition was still too fragile to travel. The hospital issued a certificate confirming her hospitalization, and I\u2019ve attached it here.\n\nWe had booked a trip from Trujillo to Buenos Aires, and unfortunately could not start it.\n\nThanks a lot for your support,  \nLuis Mi Nano\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2015-09-17**\n\n**Name**: Gloria Emperatriz Mi Nano Reyna  \n**Claimant**: Luis Mi Nano (son)  \n**Booking Ref**: LA51073211  \n**Operator**: LATAM Airlines  \n**Departure**: 2015-09-13 08:30 (local)  \n**From**: Trujillo Airport (TRU)  \n**To**: Buenos Aires Ministro Pistarini (EZE)  \n**Fare Type**: Economy \u2013 Saver  \n**Ticket Price**: $371 USD (paid)  \n**Booked on**: 2015-05-04 11:22  ",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Spanish_medical_15.webp",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "GLORIA EMPERATRIZ MI NANO REYNA",
+            "Gladis J. Santittin N\u00fa\u00f1ez"
+          ],
+          "dates": [
+            "15 de Setiembre de 2015",
+            "13 de Agosto de 2015"
+          ],
+          "amounts": [],
+          "locations": [
+            "Trujillo"
+          ],
+          "organizations": [
+            "SANNA",
+            "Cl\u00ednica S\u00e1nchez Ferrer"
+          ]
+        },
+        "text_content": "SANNA\nTrujillo 15 de Setiembre de 2015\nCONSTANCIA DE HOSPITALIZACI\u00d3N\nPor la presente se hace constar que la paciente, GLORIA\nEMPERATRIZ MI NANO REYNA con 56 a\u00f1os de edad y con\nD.N.1.17906974; estuvo hospitalizada en nuestra instituci\u00f3n,\ningresando el d\u00eda 13 de Agosto de 2015, siendo dada de alta el d\u00eda\nSe hace entrega de la presente para fines\nGladis J. Santittin N\u00fa\u00f1ez\nHISTORIAS CL\u00cdNICAS\nSANNA\nCl\u00ednica S\u00e1nchez Ferrer",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": true,
+          "has_letterhead": true,
+          "quality_assessment": "The document appears to be of reasonable quality with clear text and logos."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "cSa SANNA\n\nTrujillo 15 de Setiembre de 2015\n\nCONSTANCIA DE HOSPITALIZACI\u00d3N\n\nPor la presente se hace constar que la paciente, GLORIA\nEMPERATRIZ Mi NANO REYNA con 56 a\u00f1os de edad y con\nD.N.1.17906974; estuvo hospitalizada en nuestra instituci\u00f3n,\ningresando el d\u00eda 13 de Agosto de 2015, siendo dada de alta el d\u00eda\n\nSe hace entrega de la presente para fines\n\nSANNA\\ 222% nue\n\nClinica S\u00e1nchez Ferrer",
+          "confidence": 64.64583333333333,
+          "languages_used": [
+            "eng",
+            "spa"
+          ],
+          "word_count": 66,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "UNCERTAIN",
+    "explanation": "The medical certificate confirms Gloria Emperatriz Mi Nano Reyna was hospitalized from August 13, 2015. The flight was scheduled for September 13, 2015. The certificate is dated September 15, 2015. The certificate does not specify the discharge date, which is a critical piece of information. The document states \"siendo dada de alta el d\u00eda ___\" without filling in the date. Since the discharge date is missing, it is uncertain if she was still hospitalized on the departure date. I will mark this as uncertain.",
+    "confidence": 0.7,
+    "policy_section": "Trip Cancellation - Medical emergency",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Medical Certificate",
+      "Proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "1. Reviewed the claim description and supporting documents.",
+      "2. Verified that the medical certificate is an image file.",
+      "3. Extracted the patient's name from the medical certificate and confirmed it matches the claimant's mother's name.",
+      "4. Noted the admission date (August 13, 2015) and the scheduled departure date (September 13, 2015).",
+      "5. Observed that the medical certificate is missing the discharge date, which is a critical piece of information.",
+      "6. Determined that the missing discharge date makes it uncertain whether the patient was still hospitalized on the departure date.",
+      "7. Marked the claim as UNCERTAIN due to the incomplete discharge date on the medical certificate."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "the document is generally suspicious: stamp with signature seems photoshopped onto a non-printed document. the document mentions that the person was 'discharged on' but does not have the date."
+  },
+  "matches_expected": {
+    "exact_match": false,
+    "acceptable_match": null,
+    "expected": "DENY",
+    "acceptable_alternative": null,
+    "actual": "UNCERTAIN"
+  }
+}

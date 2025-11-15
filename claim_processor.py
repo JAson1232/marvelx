@@ -66,6 +66,10 @@ class ClaimProcessor:
         for key, value in prompt_config['document_validation'].items():
             prompt_parts.append(f"\n### {key.replace('_', ' ').title()}\n{value}")
         
+        # Fraud priority hierarchy
+        prompt_parts.append("\n## FRAUD DETECTION PRIORITY HIERARCHY\n")
+        prompt_parts.append(prompt_config['fraud_priority']['detection_hierarchy'])
+        
         # Decision guidelines
         prompt_parts.append("\n## DECISION GUIDELINES\n")
         for key, value in prompt_config['decision_guidelines'].items():

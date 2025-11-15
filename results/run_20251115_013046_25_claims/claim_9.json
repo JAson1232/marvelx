@@ -1,0 +1,101 @@
+{
+  "claim_number": 9,
+  "timestamp": "2025-11-15T01:36:06.520898",
+  "claim_data": {
+    "description": "I am writing to file a claim under my travel insurance policy for missing my flight originally scheduled for 29 July 2023. On that same day, I underwent emergency eye surgery (pterygium excision) at Centro M\u00e9dico Integral NOVAMEDIC, which rendered me unfit to travel and required a 15-day rest period.\n\nThe procedure was unplanned and medically necessary. I have attached the medical certificate, confirming the surgery and the rest period from 29 July to 12 August 2023.\n\nAs a result, I was unable to take my flight to Quito that afternoon. \n\nSince i was unable to take the flight, so please compensate me the full ticket price of 129 euros.\n\nThank you in advance",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2023-08-13**\n\n**Name**: Daisy Mariuxi Bastidas Angulo  \n**Booking Ref**: EQT-8846721  \n**Price**: \u20ac129  \n**Flight**: EQ203  \n**Operator**: Equair  \n**Departure**: 2023-07-29 17:25 (local)  \n**From**: Jos\u00e9 Joaqu\u00edn de Olmedo International Airport (GYE)  \n**To**: Mariscal Sucre International Airport (UIO)  \n**Seat**: 20F (Economy Class)  \n**Booked on**: 2023-01-17 11:56\n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "medical 2.webp",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "BASTIDAS ANGULO DAYSI MARIUXI",
+            "William Castro Su\u00e1rez",
+            "Christopher Rodriguez",
+            "ESCUELA FISCAL GIOVANNI PATRICIO CALLES LASCANO"
+          ],
+          "dates": [
+            "29 DE JULIO DEL 2023",
+            "29-07-2023",
+            "29-07-2023",
+            "29-07-2023",
+            "12-08-2023"
+          ],
+          "amounts": [
+            "15"
+          ],
+          "locations": [
+            "GUAYAQUIL",
+            "FORTIN LOCAL 11-21",
+            "GUAYAS",
+            "GUAYAQUIL"
+          ],
+          "organizations": [
+            "Novamedic",
+            "IESS"
+          ]
+        },
+        "text_content": "Novamedic\nCentro M\u00e9dica tegel\nDirecci\u00f3n KM. 25 Via Perimetral C.C. Mall el\nFortin Subsuelo Local 11-21\nnovamedis.com.es\nTel\u00e9fono 042-597270 ext. 715\nGUAYAQUIL, 29 DE JULIO DEL 2023.\nCERTIFICADO\nMEDICO\nCertifico que \u00e9l o la paciente BASTIDAS ANGULO DAYSI MARIUXI c\u00e9dula de\nciudadan\u00eda n\u00famero 0918395559 HC: 360799 fue intervenido (a) quir\u00fargicamente\nel 29 DE JULIO DEL 2023 por conjuntivo plastia PTERIGION (H110) en el\nCENTRO MEDICO INTEGRAL \"NOVAMEDIC\", UBICADO EN EL C.C. MALL EL\nFORTIN LOCAL 11-21, acreditada como prestadora externa del IESS, seg\u00fan\ncontrato 21300900-SPSSG-0145-2015- CENTRO DE ATENCION\nAMBULATORIA NOVAMEDIC -GUAYAS, por el cual se prescribe reposo\nm\u00e9dico de 15 d\u00edas (quince d\u00edas).\nA partir de hoy veintinueve de julio del dos mil veintitr\u00e9s (29-07-2023)\nhasta el doce de agosto del dos mil veintitr\u00e9s (12-08-2023). Despu\u00e9s de\nsus d\u00edas de reposo el paciente puede realizar todas sus actividades sin\nninguna limitaci\u00f3n con respecto a la cirug\u00eda.\nFECHA DE EGRESO:\nNOMBRE DE EMPRESA:\nLASCANO.\nACTIVIDAD LABORAL:\nTIPO DE CONTINGENCIA:\nDIRECCION DOMICILIARIA:\n\u0397 ENTRE 43 Y 44.\n29-07-2023.\nESCUELA FISCAL GIOVANNI PATRICIO CALLES\nDOCENTE.\nENFERMEDAD GENERAL.\nGUAYAQUIL - BATALLON DEL SUBURBIO CALLE\n0959024326.\nNUMERO TELEFONICO:\nCOD.CIE10: (H110)\nPTERIGION\nAtentamente.\nDr. William Cusfro Su\u00e1rez\nOFTALMOLOGO\nDR. WILLIAM CASTRO SU\u00c1REZ\nCIRUJANO OFTALMOLOGO\nCI: 1307576908\nLibro: 2 \"A\" Folio: 1 No.: 1\nINTRICED S.A\nINTRICA MEDSA\nNOVAMEIC\nDR. CHRISTOPHER RODRIGUEZ\nJEFE CL\u00cdNICO\nCI: 0916846173",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": true,
+          "has_letterhead": true,
+          "quality_assessment": "Good quality, clear text and images."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "pecmetrst CC Malle!\nwar\n\nNovamedic recite OM 35\n\nTetons 042 $97270 et 1S\n\nGUAYAQUIL, 28 DE JULIO DEL 2023.\n\nCERTIFICADO\nMEDICO\n\nCertifico que \u00e9! 0 la paciente BASTIDAS ANGULO DAYS! MARIUXI c\u00e9dula de\nciudadania numero 0918395559 HC: 360799 fue intervenido (a) quirurgicamente\nel 29 DE JULIO DEL 2023 por conjuntivo plastia PTERIGION (H110) en el\nCENTRO MEDICO INTEGRAL \u201cNOVAMEDIC\u2019, UBICADO EN EL C.C. MALL EL.\nFORTIN LOCAL 11-21, acreditada como prestadora externa del IESS, segun\ncontrato 21300900-SPSSG-0145-2015- CENTRO DE ATENCION\nAMBULATORIA NOVAMEDIC -GUAYAS, por el cual se prescribe reposo\nm\u00e9dico de 15 dias (quince dias).\n\nA partir de hoy veintinueve de julio del dos mil veintitr\u00e9s (29-07-2023)\nhasta el doce de agosto del dos mil veintitr\u00e9s (12-08-2023). Despu\u00e9s de\n\u2018sus dias de reposo el paciente puede realizar todas sus actividades sin\nninguna limitaci\u00e9n con respecto a la cirugia.\n\nFECHA DE EGRESO: 29-07-2023.\n\nNOMBRE DE EMPRESA: \u2014 ESCUELA FISCAL GIOVANNI PATRICIO CALLES\nLASCANO.\n\nACTIVIDAD LABORAL: DOCENTE.\n\nTIPO DE CONTINGENCIA: ENFERMEDAD GENERAL.\n\nGUAYAQUIL - BATALLON DEL SUBURBIO CALLE\n\nDIRECCION DOMICILIAR!\nHENTRE 43 Y 44.\nNUMERO TELEFONICO: 0959024326.\n\nCOD.CIE10: (H110)\n\nPTERIGION\nAtentamente.\nDe Wiliam fh ae\nEF OFTA nck 0GO ;\nTI A IGUEZ\nDR. WILLIAM CASTRO SUAREZ DR. CHRISTOPHE} RODRI\nLOGO JEFE CLINICO\nCIRUJANO OFTALMO! JEFE CLINICS\n\nCl: 1307576908\nLibro: 2 \u201cA\u201d Folio: 1.No.: 1",
+          "confidence": 58.03300330033003,
+          "languages_used": [
+            "eng"
+          ],
+          "word_count": 213,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "APPROVE",
+    "explanation": "The claim is approved because the claimant provided a medical certificate as an image file from Centro M\u00e9dico Integral NOVAMEDIC, confirming that she underwent emergency eye surgery on July 29, 2023, and requires a 15-day rest period. The name on the medical certificate, Daisy Mariuxi Bastidas Angulo, matches the claimant's name. The surgery date coincides with the flight date, making her unfit to travel. The medical certificate has a visible signature and official stamp. The timeline is reasonable, as the surgery occurred on the same day as the scheduled flight. All required documentation is present and authentic, supporting the claim reason. The claim falls under the 'Medical emergency' covered reason.",
+    "confidence": 0.95,
+    "policy_section": "Trip Cancellation - Medical emergency",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Medical certificate",
+      "Proof of booking and amount paid"
+    ],
+    "missing_documents": [],
+    "compensation_amount": "\u20ac129",
+    "reasoning_steps": [
+      "Verified that the medical certificate is an image file.",
+      "Confirmed that the medical certificate has a signature and official stamp.",
+      "Verified that the name on the medical certificate matches the claimant's name.",
+      "Confirmed that the medical certificate states a valid medical condition that prevents travel.",
+      "Verified that the dates are consistent and logical.",
+      "Analyzed the timeline and determined that the medical condition justifies cancellation for the specific travel date.",
+      "Confirmed that the claim reason is covered by the policy.",
+      "Checked for fraud indicators and found none."
+    ]
+  },
+  "expected_answer": {
+    "decision": "APPROVE"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "APPROVE",
+    "acceptable_alternative": null,
+    "actual": "APPROVE"
+  }
+}

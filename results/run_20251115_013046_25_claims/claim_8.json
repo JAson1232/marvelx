@@ -1,0 +1,53 @@
+{
+  "claim_number": 8,
+  "timestamp": "2025-11-15T01:35:24.356857",
+  "claim_data": {
+    "description": "To whom it may concern,\n\nI am submitting this claim regarding a flight I was unable to board on December 14, 2024, due to an unforeseen medical emergency. I experienced acute abdominal pain the night before the flight and was admitted to Pacific Grove Medical Center in Los Angeles.\n\nI have attached the official hospital admission and discharge documentation. I was advised not to travel for at least 48 hours following the treatment.\n\nThe flight in question was booked through my employer\u2019s travel portal.\n\nI kindly request reimbursement or rescheduling of this ticket in accordance with my insurance policy\u2019s coverage for medical emergencies.\n\nSincerely,\nNaomi Feldman\n",
+    "documents": [
+      {
+        "filename": "hospital admission1.md",
+        "content": "Pacific Grove Medical Center  \nEmergency Department \u2013 Patient Record  \nDate of Admission: 2024-12-13  \nTime of Arrival: 21:47  \nPatient Name: Naomi Feldman  \nDOB: 1992-03-08  \nAddress: 1184 Broadway Ave, Los Angeles, CA 90012  \nPatient ID: HSP-2218019  \n\nChief Complaint:  \n- Severe abdominal pain, radiating to lower right quadrant, nausea, fever.  \n\nInitial Assessment:  \n- Suspected acute appendicitis. Elevated WBC count.  \n\nProcedure/Intervention:  \n- Patient underwent observation and was administered IV fluids, antiemetics, and pain management.  \n- Surgical team consulted. Appendicitis ruled out; diagnosed with acute gastroenteritis.  \n\nDischarge Summary:  \nDate: 2024-12-14  \nTime: 16:35  \n- Condition: Stable  \n- Travel advised against for 48 hours due to risk of dehydration and recurrence of symptoms.  \n- Follow-up recommended in 3 days with primary care physician.  \n\nPhysician: Dr. Lucia Mendez  \nSignature: L. Mendez, MD\n",
+        "type": "markdown"
+      },
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2024-12-14**\n\nName: Naomi Feldman  \nBooking Ref: TCK-89473319  \nPrice: $128  \nFlight: SH4721  \nAirline: SkyHopper  \nDeparture: 2024-12-14 08:20 (local)  \nFrom: LAX (Los Angeles International Airport)  \nTo: ORD (Chicago O'Hare International Airport)  \nSeat: 18A (Economy)  \nFare Type: Corporate Flex  \nBooked on: 2024-11-28 14:02  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The provided medical documentation is in .md (markdown) format, which is a text-based file. According to the policy, medical certificates MUST be image files (jpg, jpeg, png, webp, etc.). This violates a critical document validation rule and is a Priority 1 fraud indicator. Therefore, the claim is denied.",
+    "confidence": 1.0,
+    "policy_section": "Document Validation Rules - Medical Certificates",
+    "fraud_indicators": [
+      "Medical documentation provided as .md file instead of image file"
+    ],
+    "required_documents": [
+      "Medical certificate",
+      "Proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "Checked the file type of the medical documentation.",
+      "Identified that the medical documentation is in .md format.",
+      "Verified that .md format is not an acceptable format according to the policy.",
+      "Determined that this is a Priority 1 fraud indicator.",
+      "Made the decision to DENY the claim based on the unacceptable file format."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "the medical document is in text form. this MUST be denied."
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "DENY",
+    "acceptable_alternative": null,
+    "actual": "DENY"
+  }
+}

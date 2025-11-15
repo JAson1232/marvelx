@@ -1,0 +1,87 @@
+{
+  "claim_number": 25,
+  "timestamp": "2025-11-15T01:46:17.924501",
+  "claim_data": {
+    "description": "Due to an unexpected dental emergency that occurred on the morning of July 12, 2024, I was forced to cancel my trip and could not make use of the hotel reservation made through Booking.com.\n\nThe emergency appointment was necessary to treat an acute abscess, which required immediate intervention, as confirmed by the attached dental certificate.\n\nI am therefore requesting a refund for the unused booking.\n\nKind regards,\nDaniel M\u00fcller\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2024-08-15**\n\n**Name**: Daniel M\u00fcller  \n**Booking Ref**: BKG-20240712-1155  \n**Price**: \u20ac1594.44  \n**Booking Platform**: Booking.com  \n**Payment Date**: 2024-07-12 11:35  \n**Hotel Name**: Hotel Vistaluna Milano  \n**Check-in Date**: 2024-07-12  \n**Check-out Date**: 2024-07-16  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "booking confirmation 1.jpg",
+      "metadata": {
+        "document_type": "Transaction Record",
+        "key_information": {
+          "names": [],
+          "dates": [
+            "12.07.2024"
+          ],
+          "amounts": [
+            "-1 594.44",
+            "33.87",
+            "+14.9"
+          ],
+          "locations": [],
+          "organizations": [
+            "Booking.c"
+          ]
+        },
+        "text_content": "BKG*Hotel at Booking.c\n12.07.2024 11:35\n-1 594.44 \u20ac\nBalance: 33.87 \nCashback: +14.9 AZN\ni\nOperation\ndocument",
+        "authenticity_indicators": {
+          "has_signature": false,
+          "has_official_stamp": false,
+          "has_letterhead": false,
+          "quality_assessment": "The image quality is good, the text is clear and easily readable."
+        },
+        "fraud_concerns": [],
+        "language": "English",
+        "ocr_extraction": {
+          "text": "BKG*Hotel at Booking.c\n\n-1594.44 \u20ac\nBalance: 33.87 th\n\nOperation\ndocument",
+          "confidence": 35.15384615384615,
+          "languages_used": [
+            "eng"
+          ],
+          "word_count": 10,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "UNCERTAIN",
+    "explanation": "The claim describes a dental emergency on July 12, 2024, which led to the cancellation of a hotel booking. The supporting document 'booking confirmation 1.jpg' shows a transaction record from Booking.com on July 12, 2024, for \u20ac1594.44. The current date is August 15, 2024. The claim mentions an attached dental certificate, but it was not provided in the supporting documents. Without the dental certificate, it's impossible to verify the medical emergency and its impact on the trip. Therefore, the claim is marked as UNCERTAIN, pending the submission of the dental certificate.",
+    "confidence": 0.4,
+    "policy_section": "Trip Cancellation",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Booking confirmation",
+      "Dental certificate"
+    ],
+    "missing_documents": [
+      "Dental certificate"
+    ],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "1. Analyzed the claim description and identified the reason for cancellation as a dental emergency.",
+      "2. Reviewed the supporting document 'booking confirmation 1.jpg' and confirmed the booking details.",
+      "3. Noted the absence of the dental certificate, which is crucial for verifying the medical emergency.",
+      "4. Determined that without the dental certificate, the claim cannot be approved or denied and must be marked as UNCERTAIN."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "medical document missing"
+  },
+  "matches_expected": {
+    "exact_match": false,
+    "acceptable_match": null,
+    "expected": "DENY",
+    "acceptable_alternative": null,
+    "actual": "UNCERTAIN"
+  }
+}

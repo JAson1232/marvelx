@@ -1,0 +1,97 @@
+{
+  "claim_number": 23,
+  "timestamp": "2025-11-15T01:45:02.623059",
+  "claim_data": {
+    "description": "I am writing to request a refund for a hotel reservation that I was unable to use on December 14, 2015, due to a medical emergency involving my daughter.\n\nOn that day, she was taken to the emergency department at the Hospital Sagrado Coraz\u00f3n de Jes\u00fas in Quevedo, Ecuador, where she was diagnosed with a severe headache (ICD10: G44.X) and prescribed 24 hours of strict bed rest. This unexpected health issue required my full attention, and as a result, we were unable to check in to the hotel as originally planned.\n\nI have attached the official medical certificate issued by the attending physician for verification. I kindly ask for your consideration in processing a refund or credit for a future booking.\n\nThank you for your understanding.\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2016-01-03**\n\n**Name**: Esteban Pillasagua  \n**Booking Ref**: HTL-77123391  \n**Price**: \u20ac122  \n**Hotel**: Hotel Monteverde Boutique  \n**Location**: Quevedo, Ecuador  \n**Check-in**: 2015-12-14  \n**Check-out**: 2015-12-16  \n**Guests**: 2 adults  \n**Room Type**: Standard Double Room  \n**Booked on**: 2015-11-22 18:03  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Spanish_medical_11.webp",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "PILLASAGUA CANO AMARILIS ESTELA"
+          ],
+          "dates": [
+            "Diciembre del 2015",
+            "5 de Enero del 2016",
+            "14 de Diciembre del 2015"
+          ],
+          "amounts": [
+            "24"
+          ],
+          "locations": [
+            "Quevedo"
+          ],
+          "organizations": [
+            "Ministerio de Salud P\u00fablica",
+            "Hospital Sagrado Coraz\u00f3n de Jes\u00fas",
+            "HOSPITAL SAGRADO CORAZON DE JESUS-QUEVEDO"
+          ]
+        },
+        "text_content": "MP Ministerio\nde Salud P\u00fablica\nCOORDINACION ZONAL DE SALUD 5\nHospital Sagrado Coraz\u00f3n de Jes\u00fas\nUnidad de Estad\u00edstica\n\nCERTIFICACI\u00d3N\n\nEL SUSCRITO MEDICO RESIDENTE DE EMERGENCIA DEL HOSPITAL\nSAGRADO CORAZON DE JESUS-QUEVEDO.\n\nCERTIFICA.-\n\nQue la paciente PILLASAGUA CANO AMARILIS ESTELA, de 14 a\u00f1os de edad,\nfue atendida por el servicio de Emergencia esta casa de salud, el d\u00eda 14 de\nDiciembre del 2015, por presentar:\n\nCEFALEA (CIE10:G44.X)\n\nSe recomienda reposo absoluto por el lapso de 24 horas, salvo\ncomplicaciones posteriores.\n\nFaculto a la interesada dar el uso que estime conveniente a la presente\ncertificaci\u00f3n legal.\n\nQuevedo, 5 de Enero del 2016.\n\nMEDICO RESIDENTE\n\nAREA DE EMERGENCIA\nHOSPITAL SAGRADO CORAZON DE JESUS\n\nAV.GUAYACANES N.400 PARRQ. 7 DE OCTUBRE QUEVEDO\nTELEFONO 593\n5(2) 750373\nhospitaldequevedo@hotmail.com\nwww.msp.gob.ec",
+        "authenticity_indicators": {
+          "has_signature": false,
+          "has_official_stamp": true,
+          "has_letterhead": true,
+          "quality_assessment": "Good. Clear text and logo present."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "Ministerio\n\nCOORDINACION ZONAL DE SALUD 5 15\nHospital Sagrado Coraz\u00f3n de Jes\u00fas\nUnidad de Estad\u00edstica\n\nCERTIFICACI\u00d3N\n\nEL SUSCRITO MEDICO RESIDENTE DE EMERGENCIA DEL HOSPITAL\nSAGRADO CORAZON DE JESUS-QUEVEDO.\n\nCERTIFICA.-\n\nQue la paciente PILLASAGUA CANO AMARILIS ESTELA, de 14 a\u00f1os de edad,\nfue atendida por el servicio de Emergencia esta casa de salud, el d\u00eda 14 de\nDiciembre del 2015, por presentar:\n\nCEFALEA (CIE10:G44.X)\n\nSe recomienda reposo absoluto por el lapso de 24 horas, salvo\ncomplicaciones posteriores.\n\nFaculto a la interesada dar el uso que estime conveniente a la presente\ncertificaci\u00f3n legal.\n\nQuevedo, 5 de Enero del 2016.\n\nMEDICO RESIDENTE\nAREA DE EMERGENCIA\nHOSPITAL SAGRADO CORAZON DE JESUS\n\nAV.GUAYACANES N.400 PARRQ, 7 DE OCTUBRE QUEVEDO\nTELEFONO 593\n5(2) 750373\n\nhospitaldequevedo@hotmail.com\nwww.msp.gob.ec",
+          "confidence": 62.71111111111111,
+          "languages_used": [
+            "eng",
+            "spa"
+          ],
+          "word_count": 120,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "UNCERTAIN",
+    "explanation": "The claim is for a hotel reservation cancellation on December 14, 2015, due to the claimant's daughter's medical emergency. A medical certificate from Hospital Sagrado Coraz\u00f3n de Jes\u00fas in Quevedo, Ecuador, is provided, stating the daughter was treated for a severe headache and advised to rest for 24 hours. The certificate is dated January 5, 2016. The medical certificate has a stamp and letterhead, but it lacks a visible signature from a medical professional. The patient's name on the certificate, PILLASAGUA CANO AMARILIS ESTELA, is different from the claimant's name, Esteban Pillasagua. However, since the claim is made on behalf of the daughter, this is acceptable. The absence of a signature is a concern, but the presence of a stamp and letterhead suggests the document might be legitimate. Therefore, I mark this claim as UNCERTAIN.",
+    "confidence": 0.6,
+    "policy_section": "Trip Cancellation",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Medical certificate",
+      "Proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "1. Reviewed the claim description and supporting documents.",
+      "2. Verified that the medical certificate is an image file.",
+      "3. Checked for temporal consistency: The medical certificate is dated after the incident date, which is acceptable.",
+      "4. Verified that the patient's name on the medical certificate matches the daughter's name, and the claimant is the father.",
+      "5. Noted the absence of a signature on the medical certificate, which is a concern.",
+      "6. Identified the presence of a stamp and letterhead on the medical certificate, which increases confidence in its authenticity.",
+      "7. Assessed the medical condition: A severe headache requiring 24 hours of rest is a valid reason for canceling a hotel reservation.",
+      "8. Determined that the lack of signature warrants marking the claim as UNCERTAIN."
+    ]
+  },
+  "expected_answer": {
+    "decision": "UNCERTAIN",
+    "explanation": "the document has weird dating (2016 in the bottom)",
+    "acceptable_decision": "DENY"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": false,
+    "expected": "UNCERTAIN",
+    "acceptable_alternative": "DENY",
+    "actual": "UNCERTAIN"
+  }
+}

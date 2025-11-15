@@ -1,0 +1,90 @@
+{
+  "claim_number": 11,
+  "timestamp": "2025-11-15T01:37:25.973692",
+  "claim_data": {
+    "description": "Hi,\n\nI\u2019m submitting a claim for a missed domestic flight on 25 January 2023. I had a severe migraine attack that day and had to go to the Hospital around noon. I was advised to rest for at least 12 hours due to the side effects of the treatment.\n\nThe episode was triggered by food I\u2019m allergic to, which I had unknowingly eaten a day earlier. I\u2019ve attached the doctor\u2019s note confirming the consultation and the prescribed rest. Unfortunately, I was not able to make it to the airport in time for my flight.\n\nPlease let me know if you need anything else from my side. Thanks.\n\nCristina Carhuayo Freire ",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2023-01-26**\n\n**Name**: Cristina Vanessa Carhuayo Freire  \n**Booking Ref**: LAE-7318824  \n**Price**: \u20ac88  \n**Flight**: LA1353  \n**Operator**: LATAM Ecuador  \n**Departure**: 2023-01-25 15:10 (local)  \n**From**: Mariscal Sucre International Airport (UIO)  \n**To**: Jos\u00e9 Joaqu\u00edn de Olmedo International Airport (GYE)  \n**Seat**: 8D (Economy Class)  \n**Fare Type**: Promo Plus  \n**Booked on**: 2022-11-04 10:21\n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "medical 3.webp",
+      "metadata": {
+        "document_type": "medical certificate",
+        "key_information": {
+          "names": [
+            "CRISTINA VANESSA CARHUAYO FREIRE",
+            "Fernando Roca",
+            "Patricio Flores"
+          ],
+          "dates": [
+            "25 de Enero de 2023",
+            "25 de Enero de 2023"
+          ],
+          "amounts": [],
+          "locations": [
+            "Quito"
+          ],
+          "organizations": [
+            "HOSPITAL VOZANDES QUITO"
+          ]
+        },
+        "text_content": "HOSPITAL VOZANDES QUITO\n\"A la gloria de Dios y al servicio del Ecuador\nVillalengua Oe2-37 y Av. 10 de Agosto\nPbx: 3971 000 Fax: 2944 998\nQuito, DM, 25 de Enero de 2023\nCERTIFICADO MEDICO\nEl / la paciente: CRISTINA VANESSA CARHUAYO FREIRE\nCedula / Pasaporte: 1753900586 , Historia Cl\u00ednico; 72194601\nest\u00e1 siendo atendido / a en: MEDICINA GENERAL de esta casa de salud.\nDiagnostico (s): MIGRA\u00d1A SEVERA\nHora de Ingreso: 11:45\nHora de Salida: 12:52\nA petici\u00f3n del interesado, certifico haber atendido el d\u00eda 25 de Enero de 2023, a la Se\u00f1orita\nCRISTINA VANESSA CARHUAYO FREIRE, de 20 a\u00f1os de edad, con c\u00e9dula de\nciudadan\u00eda 1753900586, qui\u00e9n se present\u00f3 a consulta con un cuadro cl\u00ednico por dolor de cabeza\nen la parte superior derecha y enrojecimiento por ingerir alimentos de antecedencia al\u00e9rgica y\npicor de los ojos.\nManteniendo reposo por 12 Horas por efectos secundarios de la Medicina Adquirida.\nPuede hacerse uso del presente certificado de la mejor manera.\nAtentamente:\nDr. Fernando Roca\nMEDICO GENERAL\nDirecci\u00f3n: Av. San Francisco N39/19 y Av. Am\u00e9rica/Tel\u00e9fonos.: (593) 02 2276 404/02 2253 8602/02 2279 838 Ext. 160/ Correo:\ng-clinic@hcjb.org.ec/Horario: Lunes a viernes de 7:30-18:30 S\u00e1bados de 7:30-13:00 / Director: Dr.Patricio Flores",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": false,
+          "has_letterhead": true,
+          "quality_assessment": "Good. Clear text and visible signature. "
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "HOSPITAL VOZANDES QUITO,\n\nVillatengua Oc2-37 y Ay. 10 de Agosto\nPhx: 3971 000 Fax: 2944 998\nQuito, DM, 25 de Enero de 2023\n\nCERTIFICADO MEDICO\nEl/ la paciente: CRISTINA VANESSA CARHUAYO FREIRE,\nCedula / Pasaporte: 1753900586 . Historia Clinico; 72194601\nest\u00e9 siendo atendido / a en: MEDICINA GENERAL de esta casa de salud,\n\nDiagnostico (s): MIGRANA SEVERA,\n\nHora de Ingreso : 11:45,\nHora de Salida : 12:52\n\nA peticiGn del interesado, certifico haber atendido el dia 25 de Enero de 2023, a la Seftorita\nCRISTINA VANESSA CARHUAYO FREIRE, de 20 afios de edad, con c\u00e9dula de\nciudadania 1753900886, qui\u00e9n se present6 a consulta con un cuadro clinico por dolor de cabeza\nen la parte superior derecha y enrojecimiento por ingerir alimentos de antecedencia al\u00e9rgica y\npicor de los ojos.\n\nManteniendo reposo por 12 Horas por efectos secundarios de la Medicina Adquirida.\n\nPuede hacerse uso del presente certificado de la mejor manera.\n\nAtentamente:\n\nDirecoln: Av. San Francisco N3QI10y Av. Am\u00e9rica Telefonos.: (583) 02 276 408 02 2253 8602 022279 838 Ext 160 Coreo:\n\u2018linicoheb-org se / Morera: Lunes a viernes de 7:20-1:30 Sdbedos de 7:20-2:00 Director: Or Patricio Flores",
+          "confidence": 64.41350210970464,
+          "languages_used": [
+            "eng"
+          ],
+          "word_count": 188,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "APPROVE",
+    "explanation": "The claim is approved because the claimant provided a medical certificate from HOSPITAL VOZANDES QUITO, which is an image file. The certificate states that Cristina Vanessa Carhuayo Freire was treated for a severe migraine on January 25, 2023, the same day as her scheduled flight. The doctor recommended 12 hours of rest due to the side effects of the treatment, making it impossible for her to catch her flight. The certificate includes a visible signature from Dr. Fernando Roca and the name on the certificate matches the claimant's name. The timeline is valid as the medical emergency occurred on the same day as the flight. The medical certificate also includes the letterhead of the hospital.",
+    "confidence": 0.95,
+    "policy_section": "Trip Cancellation - Medical emergency",
+    "fraud_indicators": [],
+    "required_documents": [
+      "medical certificate",
+      "proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": "\u20ac44",
+    "reasoning_steps": [
+      "Verified that the medical certificate is an image file.",
+      "Confirmed that the name on the certificate matches the claimant's name and is fully visible.",
+      "Verified that the certificate includes a signature from a medical professional.",
+      "Confirmed that the certificate states a valid medical condition (severe migraine) that prevented travel on the flight date.",
+      "Analyzed the timeline and determined that the medical emergency occurred on the same day as the flight, making it impossible for the claimant to travel.",
+      "Verified that the booking reference and price are provided.",
+      "Calculated the compensation amount: 50% * \u20ac88 / 1 passenger * 1 affected person = \u20ac44"
+    ]
+  },
+  "expected_answer": {
+    "decision": "APPROVE"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "APPROVE",
+    "acceptable_alternative": null,
+    "actual": "APPROVE"
+  }
+}

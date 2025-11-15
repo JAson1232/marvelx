@@ -1,0 +1,92 @@
+{
+  "claim_number": 18,
+  "timestamp": "2025-11-15T01:41:58.462026",
+  "claim_data": {
+    "description": "To whom it may concern,\n\nI am submitting this claim regarding a flight I was unable to board on December 14, 2024, due to an unforeseen medical emergency. I experienced acute abdominal pain the night before the flight and was admitted to [HOSPITAL_NAME] in [CITY].\n\nI have attached the official hospital admission and discharge documentation. I was advised not to travel for at least 48 hours following the treatment.\n\nThe flight in question was booked through my employer\u2019s travel portal.\n\nI kindly request reimbursement or rescheduling of this ticket in accordance with my insurance policy\u2019s coverage for medical emergencies.\n\nSincerely,\nDaniel Romero\n",
+    "documents": [
+      {
+        "filename": "internal flight data.md",
+        "content": "**Current date is: 2025-01-10**\n\nName: Daniel Romero  \nBooking Ref: TCK-89473319  \nFlight: SH4721  \nAirline: SkyHopper  \nDeparture: 2024-12-14 08:20 (local)  \nFrom: LAX (Los Angeles International Airport)  \nTo: ORD (Chicago O'Hare International Airport)  \nSeat: 18A (Economy)  \nFare Type: Corporate Flex  \nBooked on: 2024-11-28 14:02  \nCancellation: No-show recorded  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "hospital admission document.png",
+      "metadata": {
+        "document_type": "Image",
+        "key_information": {
+          "names": [],
+          "dates": [],
+          "amounts": [],
+          "locations": [],
+          "organizations": [
+            "HOSPITAL"
+          ]
+        },
+        "text_content": "HOSPITAL",
+        "authenticity_indicators": {
+          "has_signature": false,
+          "has_official_stamp": false,
+          "has_letterhead": false,
+          "quality_assessment": "Good. Image is clear and the text is easily readable."
+        },
+        "fraud_concerns": [],
+        "language": "English",
+        "ocr_extraction": {
+          "text": "",
+          "confidence": 18.2,
+          "languages_used": [
+            "eng"
+          ],
+          "word_count": 0,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The provided medical documentation (hospital admission document.png) lacks critical elements for validation. The document metadata indicates the absence of a signature, official stamp, and letterhead. Furthermore, the OCR extraction failed, meaning no text could be extracted from the image. The image itself appears to be a photograph of a person in front of a building labeled \"HOSPITAL\", not an official medical document. This falls under Priority 1 fraud indicators: missing signature, and lack of official document format. The document is essentially an image with the word \"HOSPITAL\" on it, not an official medical certificate. The claim is therefore denied due to incomplete and insufficient documentation.",
+    "confidence": 1.0,
+    "policy_section": "Trip Cancellation",
+    "fraud_indicators": [
+      "Missing signature on medical certificate",
+      "No official stamp or letterhead",
+      "OCR extraction failed",
+      "Document is a photograph, not an official medical document",
+      "Text-based medical description"
+    ],
+    "required_documents": [
+      "Medical certificate",
+      "Proof of booking"
+    ],
+    "missing_documents": [
+      "Official medical certificate with signature, stamp, and letterhead"
+    ],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "1. Analyzed the provided documents: internal flight data.md and hospital admission document.png.",
+      "2. Verified that internal flight data.md is a text file, which is acceptable for flight information.",
+      "3. Checked the hospital admission document.png and found that it is an image file, as required.",
+      "4. Analyzed the metadata of hospital admission document.png and found that it lacks a signature, official stamp, and letterhead.",
+      "5. Noted that the OCR extraction failed, indicating that no text could be extracted from the image.",
+      "6. Determined that the image is a photograph of a person in front of a building labeled \"HOSPITAL\", not an official medical document.",
+      "7. Identified that the document falls under Priority 1 fraud indicators: missing signature and lack of official document format.",
+      "8. Concluded that the claim should be denied due to incomplete and insufficient documentation."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "a picture is attached instead of the medical certificate",
+    "acceptable_decision": "UNCERTAIN"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": false,
+    "expected": "DENY",
+    "acceptable_alternative": "UNCERTAIN",
+    "actual": "DENY"
+  }
+}
