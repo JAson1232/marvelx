@@ -1,0 +1,90 @@
+{
+  "claim_number": 18,
+  "timestamp": "2025-11-15T01:10:57.475706",
+  "claim_data": {
+    "description": "To whom it may concern,\n\nI am submitting this claim regarding a flight I was unable to board on December 14, 2024, due to an unforeseen medical emergency. I experienced acute abdominal pain the night before the flight and was admitted to [HOSPITAL_NAME] in [CITY].\n\nI have attached the official hospital admission and discharge documentation. I was advised not to travel for at least 48 hours following the treatment.\n\nThe flight in question was booked through my employer\u2019s travel portal.\n\nI kindly request reimbursement or rescheduling of this ticket in accordance with my insurance policy\u2019s coverage for medical emergencies.\n\nSincerely,\nDaniel Romero\n",
+    "documents": [
+      {
+        "filename": "internal flight data.md",
+        "content": "**Current date is: 2025-01-10**\n\nName: Daniel Romero  \nBooking Ref: TCK-89473319  \nFlight: SH4721  \nAirline: SkyHopper  \nDeparture: 2024-12-14 08:20 (local)  \nFrom: LAX (Los Angeles International Airport)  \nTo: ORD (Chicago O'Hare International Airport)  \nSeat: 18A (Economy)  \nFare Type: Corporate Flex  \nBooked on: 2024-11-28 14:02  \nCancellation: No-show recorded  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "hospital admission document.png",
+      "metadata": {
+        "document_type": "Photograph",
+        "key_information": {
+          "names": [],
+          "dates": [],
+          "amounts": [],
+          "locations": [],
+          "organizations": [
+            "Hospital"
+          ]
+        },
+        "text_content": "HOSPITAL",
+        "authenticity_indicators": {
+          "has_signature": false,
+          "has_official_stamp": false,
+          "has_letterhead": false,
+          "quality_assessment": "Good quality, clear image."
+        },
+        "fraud_concerns": [
+          "None apparent."
+        ],
+        "language": "English",
+        "ocr_extraction": {
+          "text": "",
+          "confidence": 18.2,
+          "languages_used": [
+            "eng"
+          ],
+          "word_count": 0,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The provided medical documentation is insufficient to support the claim. The image file 'hospital admission document.png' appears to be a photograph of a person in front of a building with the word 'HOSPITAL' on it, but it is not an official hospital admission document. It lacks key elements such as a patient name, dates of admission/discharge, diagnosis, signature of a medical professional, and an official hospital stamp or letterhead. The OCR extraction also failed to extract any meaningful text. The claim states the claimant was admitted to [HOSPITAL_NAME] in [CITY], but this information is not verifiable from the provided image. Without a valid medical certificate, the claim cannot be approved.",
+    "confidence": 1.0,
+    "policy_section": "Trip Cancellation - Medical emergency",
+    "fraud_indicators": [
+      "Medical documentation is not an official document.",
+      "Missing patient name on medical document.",
+      "Missing dates of admission/discharge on medical document.",
+      "Missing signature of medical professional on medical document.",
+      "Missing official hospital stamp or letterhead on medical document."
+    ],
+    "required_documents": [
+      "Valid medical certificate"
+    ],
+    "missing_documents": [
+      "Valid medical certificate"
+    ],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "Analyzed the claim description and identified the need for a valid medical certificate.",
+      "Reviewed the attached image 'hospital admission document.png' and determined it is not an official medical document.",
+      "Identified missing key elements in the image, such as patient name, dates, signature, and official stamp.",
+      "Concluded that the provided documentation is insufficient to support the claim of a medical emergency.",
+      "Determined that the claim should be denied due to the lack of a valid medical certificate."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "a picture is attached instead of the medical certificate",
+    "acceptable_decision": "UNCERTAIN"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": false,
+    "expected": "DENY",
+    "acceptable_alternative": "UNCERTAIN",
+    "actual": "DENY"
+  }
+}

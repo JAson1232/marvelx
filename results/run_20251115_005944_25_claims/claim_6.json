@@ -1,0 +1,90 @@
+{
+  "claim_number": 6,
+  "timestamp": "2025-11-15T01:03:12.618400",
+  "claim_data": {
+    "description": "Hi,\n\nI'm reaching out early to cancel our upcoming flight for August 15. My partner, Jorge Velosa Ruiz, has been hospitalized since the night of July 22 after we rushed to the ER at Cl\u00ednica Reina Sof\u00eda. He was moved to a hospital room the next morning and is still admitted.\n\nWe were supposed to fly to Miami together on the 15th, but there's no way he'll be discharged or fit to travel by then. I\u2019ve attached the certificate from the clinic that confirms everything.\n\nI wanted to let you know ahead of time since we already know we won\u2019t be able to make the trip. Hoping this qualifies under the medical emergency policy for cancellation.\n\nThanks for understanding,  \nMarta Rojas Valbuena\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2017-07-27**\n\n**Name**: Jorge Luis Velosa Ruiz  \n**Claimant**: Marta Isabel Rojas Valbuena (partner)  \n**Booking Ref**: AV21930422  \n**Operator**: Avianca  \n**Departure**: 2017-08-15 12:40 (local)  \n**From**: El Dorado International Airport (BOG)  \n**To**: Miami International Airport (MIA)  \n**Fare Type**: Economy \u2013 Flexible with documentation  \n**Ticket Price**: $482 (USD, paid)  \n**Booked on**: 2017-06-12 13:06  ",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Spanish_medical_14.webp",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "VELOSA RUIZ JORGE LUIS",
+            "ROJAS VALBUENA MARTA ISABEL",
+            "JOSE ANTONIO RIASCOS CANO"
+          ],
+          "dates": [
+            "22 de julio del 2017",
+            "23 de julio de 2017",
+            "veinte siete (27) dias del mes de julio del 2017"
+          ],
+          "amounts": [],
+          "locations": [
+            "Clinica Reina Sof\u00eda"
+          ],
+          "organizations": [
+            "Clinica Colsanitas",
+            "Cl\u00ednica Reina Sof\u00eda"
+          ]
+        },
+        "text_content": "Clinica Colsanitas\nEL SUSCRITO JEFE DEL DEPARTAMENTO DE ESTAD\u00cdSTICA Y\nARCHIVO CL\u00cdNICO\n\nCERTIFICA\n\nQue de acuerdo con los registros cl\u00ednicos de la Clinica Reina Sof\u00eda el\npaciente VELOSA RUIZ JORGE LUIS identificado con C.C 19.092.121,\ningres\u00f3 a esta instituci\u00f3n al servicio de Urgencias el d\u00eda 22 de julio del 2017\nbajo la admisi\u00f3n U2017-42881 a las 22:18 horas, Y se traslad\u00f3 al servicio\nde Hospitalizaci\u00f3n el d\u00eda 23 de julio de 2017 a las 09:58 horas bajo la\nadmisi\u00f3n H2017-5918 y se encuentra actualmente hospitalizado en esta\ninstituci\u00f3n.\n\nLa presente se expide a solicitud del Se\u00f1ora ROJAS VALBUENA MARTA\nISABEL Identificada con C.C. 41.541.380 a los veinte siete (27) dias del\nmes de julio del 2017.\n\nAtentamente\n\nClinica ColSanitas\nDEPARTAMENTO DE\nEXTADISTICA Y ARCHIVO\nJOSE ANTONIO RIASCOS CANO\nCOORDINADOR OPERATIVO\nCl\u00ednica Reina Sof\u00eda.\n\nNIT. 800.149.384-6",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": true,
+          "has_letterhead": true,
+          "quality_assessment": "Clear text with a signature and stamp. Slightly faded."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "",
+          "error": "OCR failed: (1, 'Corrupt JPEG data: premature end of data segment Error in pixReadStreamJpeg: read error at scanline 718; nwarn = 1 Error in pixReadStreamJpeg: bad data Error in pixReadStream: jpeg: no pix returned Leptonica Error in pixRead: pix not read: /var/folders/xr/ynbnmsw90rz1p_9l5v61v2sr0000gn/T/tess_t68mq59d_input.JPEG Error during processing.')",
+          "success": false
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "APPROVE",
+    "explanation": "The claim is approved because the provided medical certificate is an image file and confirms that Jorge Luis Velosa Ruiz was admitted to Cl\u00ednica Reina Sof\u00eda on July 22, 2017, and is currently hospitalized. The certificate is dated July 27, 2017, and has a signature and official stamp. The claimant, Marta Isabel Rojas Valbuena, is Jorge's partner, and the flight is scheduled for August 15, 2017. Given that Jorge is currently hospitalized, it is reasonable to assume he will not be fit to travel by the flight date. The names match across all documents. The medical certificate is an official document and supports the claim for trip cancellation due to a medical emergency.",
+    "confidence": 0.95,
+    "policy_section": "Trip Cancellation - Medical Emergency",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Medical Certificate",
+      "Proof of Booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "Verified that the medical certificate is an image file.",
+      "Confirmed that the medical certificate has a signature and official stamp.",
+      "Verified that the patient's name (Jorge Luis Velosa Ruiz) matches the name on the medical certificate.",
+      "Verified that the claimant's name (Marta Isabel Rojas Valbuena) is mentioned in the medical certificate.",
+      "Confirmed that the medical certificate states the patient is currently hospitalized.",
+      "Analyzed the timeline: The patient was hospitalized on July 22, 2017, the certificate was issued on July 27, 2017, and the flight is on August 15, 2017. Given the current hospitalization status, it is unlikely the patient will recover in time for the flight.",
+      "Determined that the claim reason (medical emergency) is covered by the policy.",
+      "Checked for fraud indicators and found none."
+    ]
+  },
+  "expected_answer": {
+    "decision": "UNCERTAIN",
+    "explanation": "the flight is in 2 weeks from now, it is not clear if the person will still be hospitalized or otherwise unable to fly"
+  },
+  "matches_expected": {
+    "exact_match": false,
+    "acceptable_match": null,
+    "expected": "UNCERTAIN",
+    "acceptable_alternative": null,
+    "actual": "APPROVE"
+  }
+}

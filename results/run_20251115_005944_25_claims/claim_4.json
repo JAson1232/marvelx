@@ -1,0 +1,89 @@
+{
+  "claim_number": 4,
+  "timestamp": "2025-11-15T01:01:56.787477",
+  "claim_data": {
+    "description": "Dear Sir or Madam,\n\nI am requesting reimbursement for a flight I was unable to take due to a sudden illness in December. I had planned to travel for the holidays but became unwell just days before my departure.\n\nOn December 21st, 2022, I was examined by a doctor in Brussels and was declared unfit to work from December 22 through December 24 due to illness. A medical certificate was issued at the time (attached). Although the illness was not prolonged, I was advised to rest and avoid travel until fully recovered.\n\nAs a result, I had to cancel my flight originally scheduled for December 23, 2022. Please find my booking and medical certificate enclosed.\n\nI hope this qualifies under the CFSR policy.\n\nThank you for your help,  \nLouis Ndembele",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2022-12-28**\n\n**Name**: Louis Ndembele  \n**Booking Ref**: SN20455893  \n**Operator**: Brussels Airlines  \n**Departure**: 2022-12-23 15:10 (local)  \n**From**: Brussels Airport (BRU)  \n**To**: Abidjan F\u00e9lix-Houphou\u00ebt-Boigny International Airport (ABJ)  \n**Fare Type**: Economy  \n**Ticket Price**: \u20ac547 (paid)  \n**Booked on**: 2022-10-02 09:33  ",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Belgian_medical_1.webp",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [],
+          "dates": [
+            "22/1/2012",
+            "24/2/2012",
+            "21/2/2012"
+          ],
+          "amounts": [],
+          "locations": [
+            "Bruxelles"
+          ],
+          "organizations": []
+        },
+        "text_content": "Je soussign\u00e9, Docteur en m\u00e9decine, certifie avoir interrog\u00e9 et examin\u00e9 personnellement ce jour,\nM\net l'avoir reconnu(e) incapable de\ntravailler\nfr\u00e9quenter les cours\nfr\u00e9quenter les cours de gymnastique/natation\ndu 22/1/2012 au 24/2/2012 inclus,\npour cause de: maladie accident prolongation.\nSortie: autoris\u00e9e Interdite.\nSauf complications, la reprise des occupations peut \u00eatre\ntotalement partiellement\npr\u00e9vue le 21/2/2012\nLe\nSignature\nCachet\nDr M.\n72. \u0391\u03bd. \u0393\n1020 Bruxelles\nT\u00e9l.",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": true,
+          "has_letterhead": false,
+          "quality_assessment": "The document image quality is fair. There is some distortion. The handwriting is difficult to read in places."
+        },
+        "fraud_concerns": [],
+        "language": "French",
+        "ocr_extraction": {
+          "text": "Je soussign\u00e9, Docteur en m\u00e9decine, certifie avoir interrog\u00e9 et\n\nmet jour, | /\n\net l'avoir reconnue) incapable de\n\nAl vavaiter\n\nQ fr\u00e9quenter les cours\n\nQ fr\u00e9quenter les cours de gymnastique/natation\n\nSauf Complications, la reprise des occupations peut \u00eatre\nQ totalement Q partiellement\n\npr\u00e9vue le \u2026",
+          "confidence": 46.98888888888889,
+          "languages_used": [
+            "eng",
+            "fra",
+            "nld"
+          ],
+          "word_count": 45,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The medical certificate provided is dated from 2012 (22/1/2012 to 24/2/2012, issued on 21/2/2012), while the flight was scheduled for December 23, 2022, and the current date is December 28, 2022. This represents a temporal impossibility, as the medical certificate predates the flight by ten years. Additionally, the name of the patient is not clearly visible on the certificate, making name verification impossible.",
+    "confidence": 1.0,
+    "policy_section": "Policy Exclusions",
+    "fraud_indicators": [
+      "Temporal impossibility: certificate dated BEFORE incident occurred",
+      "Name is not fully visible"
+    ],
+    "required_documents": [
+      "Medical Certificate",
+      "Proof of Booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "Analyzed the claim description and supporting documents.",
+      "Identified the dates of the medical certificate (2012) and the flight (2022).",
+      "Recognized the temporal impossibility as the medical certificate is dated ten years prior to the flight.",
+      "Observed that the patient name on the medical certificate is not clearly legible.",
+      "Concluded that the claim should be denied due to the temporal impossibility and name visibility issues."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "name is redacted"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "DENY",
+    "acceptable_alternative": null,
+    "actual": "DENY"
+  }
+}

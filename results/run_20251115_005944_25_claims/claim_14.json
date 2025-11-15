@@ -1,0 +1,88 @@
+{
+  "claim_number": 14,
+  "timestamp": "2025-11-15T01:08:22.100038",
+  "claim_data": {
+    "description": "Bonjour,\n\nJe souhaite soumettre une demande de remboursement concernant un stage sportif auquel ma fille, Lily Fang, devait participer en septembre 2018. Malheureusement, en raison d\u2019un probl\u00e8me m\u00e9dical soudain, elle n'a pas pu prendre part aux activit\u00e9s.\n\nNous avions pay\u00e9 l'int\u00e9gralit\u00e9 du montant de 450 \u20ac \u00e0 l'avance pour un stage incluant des cours de cano\u00eb-kayak. Cependant, le 5 septembre 2018, le Dr Sylvie a d\u00e9livr\u00e9 un certificat m\u00e9dical indiquant que Lily FANG ne pouvait pas pratiquer d'activit\u00e9s physiques, y compris le cano\u00eb en comp\u00e9tition, pour des raisons de sant\u00e9 (\"cause \u00e0 pied\").\n\nEn cons\u00e9quence, Lily Fang a manqu\u00e9 l'int\u00e9gralit\u00e9 du stage et n\u2019a re\u00e7u aucun remboursement de l'organisateur malgr\u00e9 nos d\u00e9marches.\n\nJe joins \u00e0 cette r\u00e9clamation le certificat m\u00e9dical du Dr Sylvie comme preuve de son incapacit\u00e9 \u00e0 participer.\n\nJe sollicite donc le remboursement pr\u00e9vu dans ma police d'assurance au titre des \"activit\u00e9s manqu\u00e9es pour cause de maladie\".\n\nMerci de prendre en compte ma demande.\n\nCordialement,\nCamille Martin",
+    "documents": [
+      {
+        "filename": "internal ticket data.md",
+        "content": "**Current date is: 2018-10-20**\n\nSports camp ticket booking confirmation:  \nName: Lily Fang  \nBooking Ref: TCK-44562283  \nPrice: \u20ac450 (paid)  \nDate: 2018-09-07\n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "French_medical_1.webp",
+      "metadata": {
+        "document_type": "medical certificate",
+        "key_information": {
+          "names": [
+            "Sylvie LOSSEROY",
+            "FANG Lily"
+          ],
+          "dates": [
+            "5/9/18"
+          ],
+          "amounts": [],
+          "locations": [
+            "Montigny",
+            "DIJON"
+          ],
+          "organizations": []
+        },
+        "text_content": "Docteur Sylvie LOSSEROY\n01-M\u00e9decine G\u00e9n\u00e9rale Conventionn\u00e9\n11, rue Montigny\n21000 DIJON\n21 1026687 10-1-24-1\nA Dijon\nLe 5/9/18\nCertificat m\u00e9dical\nJe soussign\u00e9(e), Docteur LOSSONDY\nCertifie que: Mr, Mme, l'enfant FANG Lily\nDoit \u00eatre dispens\u00e9 d'\u00e9ducation physique et sportive\nPendant jours, \u00e0 compter du\nNe pr\u00e9sente actuellement aucune contre-indication apparente\n\u00e0 la pratique du sport suivant Course a Bred\ny compris en comp\u00e9tition.\nNe pr\u00e9sente actuellement aucun signe cliniquement d\u00e9celable d'affection contagieuse.\nEst apte \u00e0 la vie en collectivit\u00e9.\nNe pourra fr\u00e9quenter l'\u00e9cole pendant jours\n\u00e0 compter du et ce jusqu'au\nEst malade. La pr\u00e9sence de sa m\u00e8re/son p\u00e8re\nest indispensable aupr\u00e8s de lui pendant jours,\n\u00e0 compter du et ce jusqu'au\nSignature",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": false,
+          "has_letterhead": true,
+          "quality_assessment": "Good quality, legible text. Handwritten portions present."
+        },
+        "fraud_concerns": [],
+        "language": "French",
+        "ocr_extraction": {
+          "text": "]\n\nDocteur Sylvie LOSSEROY A (X\u2122MW\n\n01 - M\u00e9decine G\u00e9n\u00e9rale Conventionn\u00e9 is\n\n11, rue Montigny Os OF \u00ff\n21000 DIJON .\n\n211026687 | 0-1-24-1 is ae\nCertificat m\u00e9dical\n\nJe soussign\u00e9(e), Docteur _ _ Lossmay : -_\n\nCertifie que : Mr, Mme, l'enfant _ HY NG F7\n\nJ Doit \u00eatre dispens\u00e9 d'\u00e9ducation physique et sportive\n\nPendant _ 7 jours, \u00e0 compter du _\n\nMe pr\u00e9sente actuellement aucune contre-indication appdreNte\n~\n\n\u00e0 la pratique du sport suivant _ O\u00f9 ( )\n\nSh compris en comp\u00e9tition.\nLJ Ne pr\u00e9sente actuellement aucun signe cliniquement d\u00e9celable d'affection contagieuse.\nLJ Est apte \u00e0 la vie en collectivit\u00e9.\n\nJ Ne pourra fr\u00e9quenter l'\u00e9cole pendant jours\n\n\u00e0 compter du . et ce jusqu'au\n\n(J Est malade. La pr\u00e9sence de sa m\u00e8re/son p\u00e8re\n\nest indispensable aupr\u00e8s de lui pendant\n\n\u00e0 compter du et ce jusqu'au\n\nSignature",
+          "confidence": 50.60251046025105,
+          "languages_used": [
+            "eng",
+            "fra"
+          ],
+          "word_count": 137,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The medical certificate states that Lily Fang does NOT have any contraindication to practice sports, including in competition. The certificate explicitly states: \"Ne pr\u00e9sente actuellement aucune contre-indication apparente \u00e0 la pratique du sport suivant y compris en comp\u00e9tition.\" This contradicts the claim that she was unable to participate in the sports camp due to a medical reason. Therefore, the claim is denied.",
+    "confidence": 1.0,
+    "policy_section": "Trip Cancellation",
+    "fraud_indicators": [],
+    "required_documents": [
+      "medical certificate",
+      "booking confirmation"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "Analyzed the claim description and supporting documents.",
+      "Verified that the medical certificate is an image file.",
+      "Confirmed that the names match between the claim and the medical certificate.",
+      "Identified that the medical certificate states that the patient has no contraindication to practice sports.",
+      "Determined that the medical certificate contradicts the claim reason.",
+      "Made the decision to deny the claim because the medical certificate does not support the claim."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "medical document states the patient is healthy"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "DENY",
+    "acceptable_alternative": null,
+    "actual": "DENY"
+  }
+}

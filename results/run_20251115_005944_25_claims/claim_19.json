@@ -1,0 +1,84 @@
+{
+  "claim_number": 19,
+  "timestamp": "2025-11-15T01:11:34.187589",
+  "claim_data": {
+    "description": "Dear Customer Support,\n\nI am writing to request a refund for a train I was unable to board on September 20, 2013, due to an acute medical condition.\n\nOn the same day, I was diagnosed with gastroenteritis by Dr. L\u00edder Pinargote C. in Buenos Aires. The doctor prescribed hydration, general medication, and 72 hours of rest. Due to this sudden illness and the recommended recovery period, I was unable to travel as planned and missed my scheduled train.\n\nI have attached the official medical certificate issued by the attending physician to support my request. Given the unforeseen medical emergency, I kindly ask you to consider a refund for the unused ticket.\n\nThank you for your time and assistance.\n\nBest regards,\nMarcos Junes\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2013-09-28**\n\n**Name**: Marcos Junes  \n**Booking Ref**: TRN-22450119  \n**Price**: \u20ac45 (paid)  \n**Train**: Ferrobaires 713  \n**Operator**: Ferrobaires  \n**Departure**: 2013-09-20 16:50 (local)  \n**From**: Buenos Aires Constituci\u00f3n  \n**To**: Mar del Plata  \n**Seat**: Car 3, Seat 8F (Pullman Class)  \n**Fare Type**: Standard  \n**Booked on**: 2013-09-14 12:07  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Spanish_medical_6.jpeg",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "L\u00e1der Pinargote C.",
+            "Marcos Aunes"
+          ],
+          "dates": [
+            "2013"
+          ],
+          "amounts": [],
+          "locations": [
+            "Buenos Aires",
+            "C.A.B.A"
+          ],
+          "organizations": []
+        },
+        "text_content": "Dr. L\u00e1der Pinargote C.\nM\u00e9dico\n\u039c.\u039d. 139.976\nCUIT 20-94437042-1\nCertifico haber examinado a:\nMarcos Aunes de 34 a\u00f1os\nDNI 27.414.934 Quien autoriza informar que el\ndiagn\u00f3stico presuntivo de su cuadro cl\u00ednico actual es:\nGoshoenterocolites\nSugerencias: Modimos generoles, hydrataci\u00f3n\ny reporo 72 horas\nEl presente documento podr\u00e1 ser utilizado por el interesado para el fin que\nbien considere, sin constituir el mismo una referencia absoluta de su\nhistorial cl\u00ednico.\nBuenos Aires a los 20 d\u00edas del mes de Septiembre de 2013\nFirma del profesional\nLIDER PINARGOTE C.\nMedico\n\u039c.\u039d. 139.976.1 M.P. 231.073\nSello Aclaratorio y N\u00b0 de mat.\nJos\u00e9. A. Cabrera 3835 5to b C.A.B.A tel (011)15 38966389\nliderpinargote@hotmail.com",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": false,
+          "has_letterhead": true,
+          "quality_assessment": "The document appears to be of good quality and legible."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "",
+          "error": "OCR failed: (1, 'Corrupt JPEG data: premature end of data segment Error in pixReadStreamJpeg: read error at scanline 558; nwarn = 1 Error in pixReadStreamJpeg: bad data Error in pixReadStream: jpeg: no pix returned Leptonica Error in pixRead: pix not read: /var/folders/xr/ynbnmsw90rz1p_9l5v61v2sr0000gn/T/tess_6nz3sf25_input.JPEG Error during processing.')",
+          "success": false
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The name on the medical certificate, \"Marcos Aunes\", does not match the claimant's name, \"Marcos Junes\". The medical certificate also lacks an official stamp, although it has a signature and letterhead. The OCR also failed, and the name was extracted from the metadata. Given the name mismatch, I am denying the claim.",
+    "confidence": 0.9,
+    "policy_section": "Trip Cancellation",
+    "fraud_indicators": [
+      "Name mismatch between medical certificate and claimant"
+    ],
+    "required_documents": [
+      "Medical certificate",
+      "Proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "Verified that the medical certificate is an image file.",
+      "Extracted claimant's name from the claim description: Marcos Junes",
+      "Extracted patient's name from the medical certificate metadata: Marcos Aunes",
+      "Confirmed that the names do not match.",
+      "Identified that the medical certificate lacks an official stamp.",
+      "Determined that the name mismatch is a critical reason for denial."
+    ]
+  },
+  "expected_answer": {
+    "decision": "APPROVE"
+  },
+  "matches_expected": {
+    "exact_match": false,
+    "acceptable_match": null,
+    "expected": "APPROVE",
+    "acceptable_alternative": null,
+    "actual": "DENY"
+  }
+}

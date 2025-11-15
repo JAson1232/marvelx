@@ -1,0 +1,94 @@
+{
+  "claim_number": 10,
+  "timestamp": "2025-11-15T01:05:44.972502",
+  "claim_data": {
+    "description": "To whom it may concern,\n\nI am writing to request a refund for a flight that was missed on August 10, 2016, due to a last-minute medical check-up required for my daughter, LUC\u00cdA FERN\u00c1NDEZ, who was 12 years old at the time.\n\nOn the same day of the scheduled flight, she underwent a full medical evaluation at a government-certified medical facility in the State of Mexico. The check-up was mandated to assess her physical fitness and included detailed measurements, visual acuity tests, and other clinical evaluations.\n\nAlthough she was declared clinically healthy, the unforeseen scheduling and duration of this mandatory appointment made it impossible for us to arrive at the airport on time.\n\nI respectfully request a refund for the missed flight and attach the official medical certificate issued by Dr. Franco R. Hern\u00e1ndez Mar\u00edn as supporting documentation.\n\nThank you for your attention and understanding.\n\nSincerely,\nALEJANDRA FERN\u00c1NDEZ\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2016-09-01**\n\n**Name**: ALEJANDRA FERN\u00c1NDEZ  \n**Booking Ref**: FLT-19468322  \n**Price**: \u20ac226  \n**Flight**: VOLOMEX 247  \n**Operator**: Volomex Airlines  \n**Departure**: 2016-08-10 13:15 (local)  \n**From**: Mexico City International Airport (MEX)  \n**To**: Canc\u00fan International Airport (CUN)  \n**Seat**: 18C (Economy Class)  \n**Fare Type**: Basic Economy  \n**Booked on**: 2016-07-28 11:56  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Spanish_medical_5.webp",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "M. C. Franco R. Hern\u00e1ndez Mar\u00edn",
+            "MONTSERRAT BECERRIL GALV\u00c1N",
+            "Franco R. Hern\u00e1ndez Mar\u00edn"
+          ],
+          "dates": [
+            "10 de agosto de 2016"
+          ],
+          "amounts": [
+            "23 kg.",
+            "120 cm."
+          ],
+          "locations": [],
+          "organizations": [
+            "HERSA GRUPO M\u00c9DICO",
+            "ISEM"
+          ]
+        },
+        "text_content": "GOBIERNO DEL\nESTADO DE M\u00c9XICO\n\nG\nHERSA\nISEM\nENGRANDE\nGRUPO M\u00c9DICO\nCERTIFICADO M\u00c9DICO\nEl que suscribe M. C. Franco R. Hern\u00e1ndez Mar\u00edn legalmente\nautorizado para ejercer la profesi\u00f3n, con C\u00e9dula Profesional\n3280737; CERTIFICO de buena fe y con datos ver\u00eddicos a:\nMONTSERRAT BECERRIL GALV\u00c1N DE 12 A\u00d1OS\nEl d\u00eda 10 de agosto de 2016\nEn el momento se encuentra CL\u00cdNICAMENTE SANA\nPESO\n23 kg.\nTALLA\n120 cm.\n\u00cdNDICE DE MASA CORPORAL (IMC)\nNORMAL\nTIPO DE SANGRE\nO POSITIVO\nAGUDEZA VISUAL: NORMAL \u00bfYA CORREGIDO CON LENTES? NO\nPOR LO QUE NO REQUIERE VALORACI\u00d3N POR\nOFTALMOLOG\u00cdA.\nAPTO PARA REALIZAR ACTIVIDAD F\u00cdSICA: SI\nOBSERVACIONES: NINGUNA\nFIRMA\nU. A. E. M.\nDR. FRANCO R. HERN\u00c1NDEZ MAR\u00cdN",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": true,
+          "has_letterhead": true,
+          "quality_assessment": "Clear document, well-formatted, contains a signature and a stamp."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "CERTIFICADO MEDICO\n\nEl que suscribe M. C. Franco R. Hernandez Marin legalmente\nautorizado para ejercer la profesi\u00f3n, con C\u00e9dula Profesional\n3280737, CERTIFICO de buena fe y con datos ver\u00eddicos a:\n\nMONTSERRAT BECERRIL GALV\u00c1N DE 12 A\u00d1OS\nEl d\u00eda 10 de agosto de 2016\nEn el momento se encuentra CL\u00cdNICAMENTE SANA\n\nPESO 23 kg.\nTALLA 120 cm.\n\u00cdNDICE DE MASA CORPORAL (IMC) NORMAL\nTIPO DE SANGRE O POSITIVO\n\nAGUDEZA VISUAL: NORMAL \u00bfYA CORREGIDO CON LENTES? NO\n\nPOR LO QUE NO REQUIERE VALORACI\u00d3N POR\nOFTALMOLOG\u00cdA.\n\nAPTO PARA REALIZAR ACTIVIDAD F\u00cdSICA: SI\nOBSERVACIONES: NINGUNA\n\nFIRMA",
+          "confidence": 56.04597701149425,
+          "languages_used": [
+            "eng",
+            "spa"
+          ],
+          "word_count": 92,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The medical certificate states that Montserrat Becerril Galv\u00e1n was clinically healthy on August 10, 2016. The claim states the flight was missed due to a medical check-up, but the certificate indicates the patient was healthy, which contradicts the need for cancellation due to a medical reason. Additionally, the claimant is Alejandra Fern\u00e1ndez, while the patient on the medical certificate is Montserrat Becerril Galv\u00e1n. While the claim states Montserrat is Alejandra's daughter, the policy requires the patient's name on the medical certificate to match the claimant's name, which it does not. Therefore, the claim is denied.",
+    "confidence": 1.0,
+    "policy_section": "Trip Cancellation",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Medical Certificate",
+      "Proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "1. Reviewed the claim description and supporting documents.",
+      "2. Verified that the medical certificate is an image file.",
+      "3. Extracted the patient's name from the medical certificate: Montserrat Becerril Galv\u00e1n.",
+      "4. Extracted the claimant's name from the claim description: Alejandra Fern\u00e1ndez.",
+      "5. Noted that the patient's name on the medical certificate does not match the claimant's name.",
+      "6. Analyzed the medical certificate content and found that it states the patient was clinically healthy on the date of the flight.",
+      "7. Concluded that the medical certificate does not support the claim that the flight was missed due to a medical emergency.",
+      "8. Determined that the claim should be denied because the medical certificate contradicts the claim and the names do not match."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "the medical certificate states the person is healthy"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "DENY",
+    "acceptable_alternative": null,
+    "actual": "DENY"
+  }
+}

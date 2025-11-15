@@ -1,0 +1,95 @@
+{
+  "claim_number": 20,
+  "timestamp": "2025-11-15T01:12:11.994109",
+  "claim_data": {
+    "description": "Estimados,\n\nMe dirijo a ustedes para solicitar el reembolso de un vuelo que no pude tomar el d\u00eda **22 de abril de 2020** debido a una situaci\u00f3n m\u00e9dica de emergencia.\n\nEse mismo d\u00eda fui hospitalizada en la cama 303B del Servicio de Medicina Interna del Hospital Universitario Barrios Unidos, en Bogot\u00e1, seg\u00fan consta en la certificaci\u00f3n emitida por la Coordinadora de Admisiones de Mederi. La admisi\u00f3n m\u00e9dica fue repentina e impostergable, lo que me impidi\u00f3 realizar el viaje programado.\n\nAdjunto la certificaci\u00f3n de hospitalizaci\u00f3n correspondiente como respaldo de esta solicitud. Agradezco su comprensi\u00f3n y quedo atenta a cualquier documentaci\u00f3n adicional que deba presentar para que el reembolso sea procesado.\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2020-05-10**\n\n**Name**: YENNY MARLEN MENDOZA CEPEDA  \n**Booking Reference**: FLT-30428891  \n**Price**: \u20ac189  \n**Flight**: AVIANCA 8541  \n**Operator**: Avianca  \n**Departure**: 2020-04-22 12:05 (local time)  \n**From**: Bogot\u00e1 El Dorado (BOG)  \n**To**: Medell\u00edn Jos\u00e9 Mar\u00eda C\u00f3rdova (MDE)  \n**Seat**: 14D (Economy Class)  \n**Fare Type**: Promo  \n**Booked on**: 2020-03-30 09:47\n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Spanish_medical_7.webp",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "YENNY MARLEN MENDOZA CEPEDA",
+            "OLGA ROCIO BELLO GARZON"
+          ],
+          "dates": [
+            "Abril 22 del 2020"
+          ],
+          "amounts": [],
+          "locations": [
+            "Bogot\u00e1",
+            "Hospital Universitario Barrios Unidos"
+          ],
+          "organizations": [
+            "Mederi",
+            "Hospital Universitario Mayor",
+            "CORPORACION HOSPITALARIA JUAN CIUDAD"
+          ]
+        },
+        "text_content": "m\u00e9deri\n\nBogot\u00e1, Abril 22 del 2020\n\nCERTIFICACION DE HOSPITALIZACION\n\nLa suscrita coordinadora de Admisiones Mederi, se permite certificar que el (la)\npaciente YENNY MARLEN MENDOZA CEPEDA identificada con CC\n33376179 se encuentra hospitalizada en la cama 303B en el Servicio de Medicina\nInterna del Hospital Universitario Barrios Unidos desde el 22 de Abril del 2020.\n\nAtentamente,\n\nOLGA ROCIO BELLO GARZON\nCOORDINADOR DE ADMISIONES MEDERI\nCORPORACION HOSPITALARIA JUAN CIUDAD\nHOSPITAL UNIVERSITARIO MAYOR\nCalle 24 #29-61 Conmutador: 5600520 Ext. 4024",
+        "authenticity_indicators": {
+          "has_signature": false,
+          "has_official_stamp": false,
+          "has_letterhead": true,
+          "quality_assessment": "Good. Clear text and logo."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "Noy me\u00e9der!\n\nBogota, Abril 22 del 2020\n\nCERTIFICACION DE HOSPITALIZACION\n\nLa suscrita coordinadora de Admisiones Mederi, se permite certificar que el (la)\npaciente YENNY MARLEN MENDOZA CEPEDA identificada con CC\n33376179 se encuentra hospitalizada en la cama 303B en el Servicio de Medicina\nInterna del Hospital Universitario Barrios Unidos desde el 22 de Abril del 2020.\n\nAtentamente,\n\nOLGA ROCIO BELLO GARZON\n\nCOORDINADOR DE ADMISIONES MEDERI\nCORPORACION HOSPITALARIA JUAN CIUDAD\nHOSPITAL UNIVERSITARIO MAYOR\nCall 24 429-61 Cormmeador 5600520 Be 4024",
+          "confidence": 64.02702702702703,
+          "languages_used": [
+            "eng",
+            "spa"
+          ],
+          "word_count": 79,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "UNCERTAIN",
+    "explanation": "The claim is for a flight cancellation due to hospitalization on the same day, April 22, 2020. The medical certificate confirms hospitalization of Yenny Marlen Mendoza Cepeda on that date. However, the medical certificate lacks a signature and official stamp, which raises concerns about its authenticity. While the document has a letterhead, the absence of a signature necessitates marking the claim as uncertain pending further verification.",
+    "confidence": 0.6,
+    "policy_section": "Trip Cancellation - Medical Emergency",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Medical Certificate",
+      "Booking Reference"
+    ],
+    "missing_documents": [],
+    "compensation_amount": "\u20ac189",
+    "reasoning_steps": [
+      "1. The claim is for trip cancellation due to a medical emergency (hospitalization).",
+      "2. The claimant provided a medical certificate as evidence.",
+      "3. The medical certificate is an image file, which meets the initial file type requirement.",
+      "4. The medical certificate states that Yenny Marlen Mendoza Cepeda was hospitalized on April 22, 2020, which is the date of the scheduled flight.",
+      "5. The name on the medical certificate matches the claimant's name.",
+      "6. The medical certificate has a letterhead but lacks a signature and official stamp.",
+      "7. The absence of a signature raises concerns about the authenticity of the document.",
+      "8. The claim is marked as uncertain due to the missing signature on the medical certificate."
+    ]
+  },
+  "expected_answer": {
+    "decision": "UNCERTAIN",
+    "explanation": "no signature on the medical certificate",
+    "acceptable_decision": "DENY"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": false,
+    "expected": "UNCERTAIN",
+    "acceptable_alternative": "DENY",
+    "actual": "UNCERTAIN"
+  }
+}

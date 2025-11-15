@@ -1,0 +1,96 @@
+{
+  "claim_number": 13,
+  "timestamp": "2025-11-15T01:07:43.565157",
+  "claim_data": {
+    "description": "Bonjour,\n\nSuite \u00e0 une hospitalisation le 16 d\u00e9cembre 2023 pour un examen m\u00e9dical urgent \u00e0 l\u2019h\u00f4pital Saint-Louis \u00e0 Paris, je n\u2019ai pas pu me pr\u00e9senter \u00e0 mon vol initialement pr\u00e9vu ce jour-l\u00e0.\n\nVous trouverez ci-joint mon certificat d\u2019hospitalisation attestant de ma prise en charge.\n\nJe sollicite donc un remboursement ou, \u00e0 d\u00e9faut, l\u2019\u00e9mission d\u2019un avoir.\n\nJe reste disponible pour toute information compl\u00e9mentaire.\n\nCordialement,\nKouadri Elhadi Mehdi\n",
+    "documents": [
+      {
+        "filename": "internal flight data.md",
+        "content": "**Current date is: 2024-01-22**\n\nFlight booking information:  \n**Name**: Kouadri Elhadi Mehdi  \n**Booking Ref**: TCK-55892377  \n**Price**: \u20ac142 (paid)  \n**Flight**: AF1342  \n**Airline**: Air France  \n**Departure**: 2023-12-16 17:40 (local)  \n**From**: CDG (Paris Charles de Gaulle Airport)  \n**To**: BCN (Barcelona\u2013El Prat Airport)  \n**Seat**: 22D (Economy)  \n**Fare Type**: Semi-Flexible  \n**Booked on**: 2023-11-15 09:12  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "French_medical_4.webp",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "Kurtneh Mohamed",
+            "KOUADRI ELHADI MEHDI"
+          ],
+          "dates": [
+            "05.08.1999",
+            "16/12/2023",
+            "17/12/2023",
+            "17/11/2023"
+          ],
+          "amounts": [],
+          "locations": [
+            "Paris",
+            "Saint-Denis"
+          ],
+          "organizations": [
+            "H\u00f4pital Saint-Louis",
+            "AP-HP"
+          ]
+        },
+        "text_content": "H\u00f4pital\nSaint-Louis\nAP-HP\n\nCERTIFICAT D'HOSPITALISATION\n\nJe soussign\u00e9, Docteur Kurtneh Mohamed, Praticien Hospitalier dans le service\nde M\u00e9decine Physique et R\u00e9adaptation \u00e0 l'h\u00f4pital Saint-Louis -1 Av. Claude\nVellefaux 75010 Paris, atteste que Monsieur KOUADRI ELHADI MEHDI, n\u00e9\nle 05.08.1999, a \u00e9t\u00e9 pris en charge en h\u00f4pital, \u00e0 raison d'examen m\u00e9dical\npour une dur\u00e9e de un jours, le 16/12/2023 au 17/12/2023\n\nSightHoller G\u00e9n\u00e9ral de l\nROV 142 35 69.00\nSalas de Longue\n279-93205 Saint-Denis Cedex\n42 35 61 40\n1 42 35 62 89\natrie\nEEG EMG\nFait \u00e0 PARIS le 17/11/2023\n\nCe certifiicat lui est d\u00e9livr\u00e9 pour servir et valoir ce que de droit.\nIl faut signaler toute anomalie \u00e0 votre m\u00e9decin traitant ou votre chirurgien (vomissements, fi\u00e8vre, persistance ou\nr\u00e9apparition de la douleur, h\u00e9matome, douleur \u00e0 distance...).",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": true,
+          "has_letterhead": true,
+          "quality_assessment": "The document appears to be of good quality with clear text and a visible signature and stamp."
+        },
+        "fraud_concerns": [],
+        "language": "French",
+        "ocr_extraction": {
+          "text": "H\u00f4pital\nSaint-Louis\nAP-HP\n\nCERTIFICAT D'HOSPITALISATION\n\nJe soussign\u00e9, Docteur Kurtneh Mohamed, Praticien Hospitalier dans le service\nde M\u00e9decine Physique et R\u00e9adaptation \u00e0 l'h\u00f4pital Saint-Louis -1 Av. Claude\nVellefaux - 75010 Paris. atteste que Monsieur KOUADRI ELHADI MEHDI, n\u00e9\nle 05.08.1999, a \u00e9t\u00e9 pris en charge en h\u00f4pital. \u00e0 raison d'examen m\u00e9dical\npour une dur\u00e9e de un jours . le 16/12/2023 au 17/12/2023\n\nFait \u00e0 PARIS le 17/11/2023\n\nCe certifiicat lui est d\u00e9livr\u00e9 pour servir et valoir ce que de droit.\n\nII faut signaler toute anomalie \u00e0 votre m\u00e9decin traitant ou votre chirurgien (vomissements, fi\u00e8vre, persistance ou\nr\u00e9apparition de la douleur, h\u00e9matome, douleur \u00e0 distance...)",
+          "confidence": 71.30827067669173,
+          "languages_used": [
+            "eng",
+            "fra"
+          ],
+          "word_count": 103,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "APPROVE",
+    "explanation": "The claim is approved because the claimant provided a valid medical certificate from H\u00f4pital Saint-Louis, which is an image file. The certificate confirms the claimant, Kouadri Elhadi Mehdi, was hospitalized for a medical examination from December 16, 2023, to December 17, 2023. This hospitalization prevented the claimant from taking their flight on December 16, 2023. The certificate has a visible signature and official stamp. The names on the flight booking and the medical certificate match and are fully visible. The timeline is reasonable as the hospitalization occurred on the same day as the flight. Let me verify if H\u00f4pital Saint-Louis exists.  H\u00f4pital Saint-Louis is a real hospital in Paris, France, which supports the authenticity of the document. The claim falls under the Trip Cancellation coverage due to a medical emergency.",
+    "confidence": 0.95,
+    "policy_section": "Trip Cancellation",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Medical certificate",
+      "Flight booking information"
+    ],
+    "missing_documents": [],
+    "compensation_amount": "\u20ac142",
+    "reasoning_steps": [
+      "Verified that the medical certificate is an image file.",
+      "Extracted key information from the medical certificate, including patient name, dates of hospitalization, and hospital name.",
+      "Verified that the patient name on the medical certificate matches the claimant's name and the name on the flight booking.",
+      "Confirmed that the dates of hospitalization coincide with the flight date, justifying the cancellation.",
+      "Verified that the medical certificate has a signature and official stamp.",
+      "Verified that H\u00f4pital Saint-Louis is a real hospital in Paris.",
+      "Determined that the claim falls under the Trip Cancellation coverage due to a medical emergency."
+    ]
+  },
+  "expected_answer": {
+    "decision": "UNCERTAIN",
+    "explanation": "suspicious dating on the document (17/11/2023 stamp)",
+    "acceptable_decision": "DENY"
+  },
+  "matches_expected": {
+    "exact_match": false,
+    "acceptable_match": false,
+    "expected": "UNCERTAIN",
+    "acceptable_alternative": "DENY",
+    "actual": "APPROVE"
+  }
+}

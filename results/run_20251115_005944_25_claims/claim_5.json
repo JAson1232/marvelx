@@ -1,0 +1,90 @@
+{
+  "claim_number": 5,
+  "timestamp": "2025-11-15T01:02:33.714488",
+  "claim_data": {
+    "description": "Hi there,\n\nI\u2019m writing to explain why I had to cancel my flight on such short notice.\n\nOn October 31st, I suddenly felt really shitty while at work at the retirement home (Casa di Riposo Sant\u2019Anna). I left around 12:30 PM and was checked out by the doctor on site, Dr. Lucini Cristina. She confirmed I wasn\u2019t in a condition to keep working or travel and told me to follow up with my own doctor. I've attached her note here.\n\nUnfortunately, my flight to Palermo was scheduled for the next morning, and I just wasn\u2019t physically up for it. I had to cancel the whole trip. I\u2019m hoping this qualifies under the medical emergency clause of my travel insurance.\n\nThanks in advance for your help,  \nOlivier Bayante\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2011-11-05**\n\n**Name**: Olivier Bayante  \n**Booking Ref**: AZ88124933  \n**Operator**: Alitalia  \n**Departure**: 2011-11-01 08:10 (local)  \n**From**: Milano Linate Airport (LIN)  \n**To**: Palermo Falcone\u2013Borsellino Airport (PMO)  \n**Fare Type**: Economy Light  \n**Ticket Price**: \u20ac142 (paid)  \n**Booked on**: 2011-10-10 16:08  ",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Italian_medical_2a.jpg",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "Benfants Oliviers",
+            "Licini Cristina"
+          ],
+          "dates": [
+            "31. X. 2011"
+          ],
+          "amounts": [
+            "12.30"
+          ],
+          "locations": [
+            "Covozo",
+            "Quardia"
+          ],
+          "organizations": [
+            "Fondazione Casa di Ricovero Santa Maria Ausiliatrice ONLUS"
+          ]
+        },
+        "text_content": "31. X. 2011\n\nSi certifica che il\nSij. Benfants Oliviers,\nlosis Il pario di Covozo\nalle ore 12.30 Com ewendo\nCoxelgia acuta.\nSi nine Il cureure.\n\nFONDAZIONE\nCASA DE RICOVERO\nSANTA MARIA AUSILIATRICE\nONLUS\n\n(LICINI CRISTINA-MEDICO AM\nCUAYOPIA)",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": true,
+          "has_letterhead": true,
+          "quality_assessment": "The document appears to be handwritten with a signature and a stamp from the hospital. The image quality is slightly degraded. Some text is not perfectly clear due to handwriting."
+        },
+        "fraud_concerns": [],
+        "language": "Italian",
+        "ocr_extraction": {
+          "text": "",
+          "error": "OCR failed: (1, 'Corrupt JPEG data: premature end of data segment Error in pixReadStreamJpeg: read error at scanline 430; nwarn = 1 Error in pixReadStreamJpeg: bad data Error in pixReadStream: jpeg: no pix returned Leptonica Error in pixRead: pix not read: /var/folders/xr/ynbnmsw90rz1p_9l5v61v2sr0000gn/T/tess_l5jhel4z_input.JPEG Error during processing.')",
+          "success": false
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The medical certificate provided is an image file, which is acceptable. However, the name on the certificate, \"Benfants Oliviers,\" does not match the claimant's name, \"Olivier Bayante.\" The family names are also different. Additionally, the OCR extraction failed, making it difficult to verify the contents of the document. The handwriting is also not perfectly clear. Due to the name mismatch, this claim is denied.",
+    "confidence": 0.9,
+    "policy_section": "Trip Cancellation - Medical Emergency",
+    "fraud_indicators": [
+      "Name mismatch between medical certificate and claimant",
+      "Poor OCR extraction"
+    ],
+    "required_documents": [
+      "Medical Certificate",
+      "Proof of Booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "Checked that the medical certificate is an image file.",
+      "Extracted the claimant's name from the claim description: Olivier Bayante.",
+      "Extracted the patient's name from the medical certificate metadata: Benfants Oliviers.",
+      "Compared the names and found a mismatch.",
+      "Determined that the name mismatch is a critical reason for denial.",
+      "Noted the OCR extraction failure, further hindering verification.",
+      "The travel date was 2011-11-01 and the certificate date was 2011-10-31, so the timeline is acceptable if the name matched."
+    ]
+  },
+  "expected_answer": {
+    "decision": "APPROVE"
+  },
+  "matches_expected": {
+    "exact_match": false,
+    "acceptable_match": null,
+    "expected": "APPROVE",
+    "acceptable_alternative": null,
+    "actual": "DENY"
+  }
+}

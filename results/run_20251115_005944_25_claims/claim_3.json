@@ -1,0 +1,101 @@
+{
+  "claim_number": 3,
+  "timestamp": "2025-11-15T01:01:19.427215",
+  "claim_data": {
+    "description": "To whom it may concern,\n\nI am filing a claim for reimbursement of my flight, which I was unable to take due to a sudden medical emergency that required hospitalization and surgery.\n\nOn August 13, 2011, I was admitted to Clinique M\u00e9dicale de Bassam for acute pelvic pain, cardiac distress, and gallbladder complications. The attending physician, Dr. Kouassi Kone Francois, diagnosed me with biliary colic and cholelithiasis and ordered an urgent surgical intervention. Due to this, I could not proceed with my scheduled travel.\n\nPlease find attached the official hospitalization certificate as proof of my condition. I request a refund of the flight.\n\nSincerely,  \nEvelyne Kacou Meitiale",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2011-09-01**\n\nName: Kacou Meitiale Evelyne  \nBooking Reference: UY-11238944  \nFlight Number: AF703  \nAirline: Air France  \nDeparture: 2011-08-13 19:45 (local)  \nOrigin: Abidjan F\u00e9lix Houphou\u00ebt-Boigny International Airport (ABJ)  \nDestination: Paris Charles de Gaulle Airport (CDG)  \nFare Type: Economy Class  \nTicket Cost: \u20ac624  \nDate of Booking: 2011-01-05  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "French_medical_5.webp",
+      "metadata": {
+        "document_type": "Medical Certificate",
+        "key_information": {
+          "names": [
+            "KOUASSI KONE FRANCOIS",
+            "KACOU MEITIALE EVELYNE"
+          ],
+          "dates": [
+            "13 Ao\u00fbt 2011",
+            "15/08/2011"
+          ],
+          "amounts": [
+            "491 300 FCFA",
+            "45 000 FCFA",
+            "220 000 FCFA",
+            "70 000 F CFA",
+            "130 000 F CFA",
+            "156 300 F CFA"
+          ],
+          "locations": [
+            "GRAND BASSAM",
+            "ROUTE DE BONOUA"
+          ],
+          "organizations": [
+            "CLINIQUE MEDICALE DE BASSAM"
+          ]
+        },
+        "text_content": "CLINIQUE MEDICALE DE BASSAM\nADRESSE GEO: GRAND BASSAM, ROUTE DE BONOUA\nADRESSE POSTALE: BP 174 GRAND BASSAM\nTEL: +225 04 01 24 11\nFAX: +225 66 30 40 57\nEMAIL: cliniquemedicale@live.fr\n\nCERTIFICAT D'HOSPITALISATION\n\nJe soussign\u00e9, docteur KOUASSI KONE FRANCOIS M\u00e9decin chef de la clinique\nm\u00e9dicale de Grand-Bassam que l'\u00e9tat de sant\u00e9 de Mme KACOU MEITIALE\nEVELYNE n\u00e9cessite une hospitalisation et une op\u00e9ration chirurgicale dans notre\n\u00e9tablissement.\nElle a \u00e9t\u00e9 admise dans notre clinique le 13 Ao\u00fbt 2011\n\nCAUSES: douleurs pelviennes, crise cardiaque, calcul biliaire, et chol\u00e9 lithiase.\n\nLes frais d'hospitalisation et de prestation chirurgicale s'\u00e9l\u00e8vent \u00e0 : 491 300 FCFA\n\nSalon infirmier / 45 000 FCFA\nPrestations / 220 000 FCFA\nDroit d'h\u00e9bergement / 70 000 F CFA\n\u00c9quipe chirurgicale (un chirurgien, 1 \u00e9quipe de soins intensif) / 130 000 F CFA\nMat\u00e9riel chirurgical (plaque et des vis) / 156 300 F CFA\n\nNB: ces frais de prestation chirurgicale ne sont pas n\u00e9gociables et doivent \u00eatre avant la\nfin de l'op\u00e9ration, afin de pouvoir mettre \u00e0 disposition de la patiente tout le n\u00e9cessaire.\n\nURGENT\nFait \u00e0 GRAND BASSAM\nCLINIQUE MEDICALE DE BASSAM\nDr KOUASSI KONE FRANCOIS\nDATE: 15/08/2011",
+        "authenticity_indicators": {
+          "has_signature": true,
+          "has_official_stamp": false,
+          "has_letterhead": true,
+          "quality_assessment": "The document appears to be of standard quality. There are no obvious signs of alteration. The text is clearly legible and the key information is easy to identify."
+        },
+        "fraud_concerns": [],
+        "language": "French",
+        "ocr_extraction": {
+          "text": "CLINIQUE MEDICALE DE BASSAM\n\nADRESSE GEO : GRAND BASSAM, ROUTE DE BONOUA\nADRESSE POSTALE : BP 174 GRAND BASSAM\nTEL : +225 04 01 24 11\nFAX : +225 66 30 40 57\nEMAIL : cliniquemedicale@live.fr\n\nCERTIFICAT D'HOSPITALISATION\n\nJe soussign\u00e9, docteur KOUASSI KONE FRANCOIS M\u00e9decin chef de la clinique\nm\u00e9dicale de Grand-Bassam que l\u2019\u00e9tat de sant\u00e9de Mme KACOU MEITIALE\nEVELYNE. n\u00e9cessite une hospitalisation et une op\u00e9ration chirurgicale dans notre\n\u00e9tablissement.\nElle a \u00e9t\u00e9 admise dans notre clinique le 13 Ao\u00fbt2011\n\nCAUSES : douleurs pelviennes, crise cardiaque, calcul biliaire, et chol\u00e9 lithiase.\n\nLes frais d\u2019hospitalisation. et de prestation chirtirgicale s'\u00e9l\u00e8vent \u00e0 : 491 300 FCFA!\n\nSalon infirmier 1 45000 FCFA\nPrestations 1220000 FCFA\nDroit d\u2019h\u00e9bergement 1 70000 F CFA\n\u00c9quipe chirurgicale (un chirurgien, 1 \u00e9quipe de soins intensif) / 130 000 F CFA\nMat\u00e9riel chirurgical (plaque et des vis) 1 156300F CFA\n\nNB : ces frais de prestation chirurgicale ne sont pas n\u00e9gociables et doivent \u00e9tre avant la\nfin de Vop\u00e9ration, afin de pouvoir mettre \u00e0 disposition de la patiente tout le n\u00e9cessaire.\n\nFait a GRAND BASSAM",
+          "confidence": 69.45333333333333,
+          "languages_used": [
+            "eng",
+            "fra"
+          ],
+          "word_count": 176,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "APPROVE",
+    "explanation": "The claim is approved because the claimant provided a valid medical certificate as an image file from Clinique M\u00e9dicale de Bassam, which confirms hospitalization and surgery due to acute pelvic pain, cardiac distress, and gallbladder complications on August 13, 2011. The certificate is signed by Dr. Kouassi Kone Francois and dated August 15, 2011. The claimant's name, Kacou Meitiale Evelyne, is fully visible and matches the name on the certificate and the claim. The flight was scheduled for August 13, 2011, the same day as the hospitalization, making it impossible for the claimant to travel. The medical condition justifies the cancellation. All required documentation is present and authentic. The travel date is in the past, so no future recovery assessment is needed.",
+    "confidence": 0.95,
+    "policy_section": "Trip Cancellation - Medical emergency",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Medical Certificate",
+      "Proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": "\u20ac624",
+    "reasoning_steps": [
+      "Verified that the medical certificate is an image file.",
+      "Confirmed that the medical certificate has a visible signature from Dr. Kouassi Kone Francois.",
+      "Verified that the medical certificate has a letterhead from Clinique M\u00e9dicale de Bassam.",
+      "Confirmed that the patient's name on the medical certificate, Kacou Meitiale Evelyne, matches the claimant's name and is fully visible.",
+      "Verified that the medical certificate states a medical condition that prevents travel (acute pelvic pain, cardiac distress, and gallbladder complications).",
+      "Checked that the dates are consistent: Admission on August 13, 2011, certificate issued on August 15, 2011, flight on August 13, 2011.",
+      "Analyzed the timeline: The hospitalization occurred on the same day as the scheduled flight, making it impossible to travel.",
+      "Determined that the medical condition justifies the cancellation of the flight.",
+      "Confirmed that the claim reason is covered by the policy (medical emergency).",
+      "Checked for fraud indicators and found none."
+    ]
+  },
+  "expected_answer": {
+    "decision": "APPROVE"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "APPROVE",
+    "acceptable_alternative": null,
+    "actual": "APPROVE"
+  }
+}

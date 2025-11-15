@@ -34,8 +34,6 @@ wheels/
 *.swo
 *~
 
-# Results
-results/
 
 # Logs
 *.log

@@ -1,0 +1,84 @@
+{
+  "claim_number": 2,
+  "timestamp": "2025-11-15T01:00:36.969865",
+  "claim_data": {
+    "description": "I am writing to request reimbursement for a prepaid medical appointment that I was unable to attend due to international travel on March 5, 2024.\n\nI had a confirmed appointment scheduled in Johannesburg that morning, but my flight from Windhoek with South African Airways (SA 1732) did not land in time for me to reach the clinic. As a result, I missed the appointment entirely and was still charged $113 in advance as per the clinic's cancellation policy.\n\nAttached is a copy of my boarding pass confirming my travel on the morning of March 5. I kindly ask for compensation for the lost appointment.\n\nThank you for your consideration,\nDerek Kotze\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2024-05-01**\n\n**Name**: Derek Kotze  \n**Flight Number**: SA 1732  \n**Airline**: South African Airways  \n**Date**: 2024-03-05  \n**Departure**: 9:15 local time  \n**From**: Windhoek (WDH)  \n**To**: Johannesburg (JNB)  \n**Seat**: 16A  \n**Class**: Economy  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "boarding pass 1.webp",
+      "metadata": {
+        "document_type": "boarding pass",
+        "key_information": {
+          "names": [
+            "KOTZE/DEREK/MR"
+          ],
+          "dates": [
+            "05MAR0855"
+          ],
+          "amounts": [],
+          "locations": [
+            "WINDHOEK",
+            "JOHANNESBURG"
+          ],
+          "organizations": [
+            "SOUTH AFRICAN AIRWAYS"
+          ]
+        },
+        "text_content": "ECONOMY\nBoarding pass SOUTH AFRICAN\nAIRWAYS\nName\nKOTZE/DEREK/MR\nFUTV SA-90469940/BLUE\nFrom WINDHOEK WDH\nTo JOHANNESBURG\nFlight Class Date Time\nSA 1732KY 05MAR0855\nGate Boarding Time Seat No Smoking\n0835 16A NO\nPc Wt www.flysaa.com\n0 0 001\nETKT 0833897019464-2\nA STAR ALLIANCE MEMBER",
+        "authenticity_indicators": {
+          "has_signature": false,
+          "has_official_stamp": false,
+          "has_letterhead": true,
+          "quality_assessment": "Good, clear image."
+        },
+        "fraud_concerns": [],
+        "language": "English",
+        "ocr_extraction": {
+          "text": "ECONOMY\npone pass so SOUTH AFRICAN\n\nAIRWAYS\n\nALLIANCE MEM",
+          "confidence": 27.192307692307693,
+          "languages_used": [
+            "eng"
+          ],
+          "word_count": 9,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The claim is for a missed medical appointment due to a flight delay. Medical appointments are explicitly excluded from coverage under the policy. The policy only covers medical *emergencies*, not routine appointments. Therefore, the claim is denied.",
+    "confidence": 1.0,
+    "policy_section": "POLICY EXCLUSIONS",
+    "fraud_indicators": [],
+    "required_documents": [
+      "boarding pass"
+    ],
+    "missing_documents": [],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "1. The claim is for a missed medical appointment due to a flight delay.",
+      "2. The policy explicitly excludes medical appointments as a covered reason for cancellation.",
+      "3. Therefore, the claim is denied."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "medical document missing, the missed the medical appointment is not covered"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": null,
+    "expected": "DENY",
+    "acceptable_alternative": null,
+    "actual": "DENY"
+  }
+}

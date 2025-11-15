@@ -1,0 +1,98 @@
+{
+  "claim_number": 24,
+  "timestamp": "2025-11-15T01:14:41.911936",
+  "claim_data": {
+    "description": "To whom it may concern,\n\nI am writing to request a refund for a train journey I was unable to take on February 2, 2017, due to a medical issue that worsened the day before travel.\n\nWhile I did not seek medical attention immediately, the following day I visited the Hospital General Docente Calder\u00f3n in Quito and was diagnosed with sinusitis (ICD-10: J66). I had been experiencing symptoms for several days, but on the morning of the trip, I felt too unwell to travel and made the difficult decision to stay home.\n\nThe medical certificate issued by Dr. Elizabeth Cueva confirms my condition and the consultation on February 5, 2017. I understand the appointment was not on the same day as the scheduled trip, but I hope you will consider the documentation as valid support for my request. The illness clearly impacted my ability to travel.\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2017-02-21**\n\n**Name**: GUANOTU\u00d1A TOALOMBO JORDY STALIN  \n**Booking Ref**: TRN-11047622  \n**Price**: \u20ac29  \n**Train**: Tren Ecuador Expreso 302  \n**Operator**: Empresa de Ferrocarriles Ecuatorianos  \n**Departure**: 2017-02-02 08:00 (local)  \n**From**: Quito  \n**To**: Riobamba  \n**Seat**: Coach B, Seat 7A  \n**Fare Type**: Turista  \n**Booked on**: 2017-01-05 15:46  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [
+    {
+      "filename": "Spanish_medical_12.webp",
+      "metadata": {
+        "document_type": "medical certificate",
+        "key_information": {
+          "names": [
+            "GUANOTU\u00d1A TOALOMBO JORDY STALIN",
+            "ELIZABETH CUEVA"
+          ],
+          "dates": [
+            "05 de febrero del 2017",
+            "11:45 AM",
+            "1:30 PM"
+          ],
+          "amounts": [],
+          "locations": [
+            "Quito"
+          ],
+          "organizations": [
+            "HOSPITAL GENERAL DOCENTE CALDERON",
+            "Ministerio de Salud P\u00fablica"
+          ]
+        },
+        "text_content": "MP\nMinisterio\nHOSPITAL GENERAL DOCENTE CALDERON\nde Salud P\u00fablica\n\nCERTIFICADO MEDICO\nQuito, 05 de febrero del 2017\n\nCertifico, que la se\u00f1or: GUANOTU\u00d1A TOALOMBO JORDY\nSTALIN, con numero de cedula: 1751406131, con HCL\n1410, acude al, HOSPITAL GENERAL DOCENTE\nCALDERON HIERRO a la \u00e1rea de MEDICINA GENERAL,\ncon diagn\u00f3stico de SINUSITIS CIE 10 (J 66), finalidad de\ndar a conocer que la paciente tuvo cita desde las 11:45 AM\nhasta las 1:30 PM Ministerio\nde Salud Publica\nHOSPITAL GENERAL DOCENTE CALDERON\nOSPITAL DOCENTE CALDERIN\nMED, GENERAL\nDra Elizabeth\nDra. ELIZABETH CUEVA\nHOSPITAL GENERAL DOCENTE CALDERON",
+        "authenticity_indicators": {
+          "has_signature": false,
+          "has_official_stamp": false,
+          "has_letterhead": true,
+          "quality_assessment": "Good. Clear text and visible logos."
+        },
+        "fraud_concerns": [],
+        "language": "Spanish",
+        "ocr_extraction": {
+          "text": "Minit HOSPITAL GENERAL DOCENTE CALDERON\nso Salud P\u00fablica\n\nCERTIFICADO MEDICO\nQuito, 05 de febrero del 2017\n\nCertifico, que la se\u00f1or: GUANOTU\u00d1A TOALOMBO JORDY\nSTALIN, con numero de cedula: 1751406131, con HCL\n1410,acude al, HOSPITAL GENERAL DOCENTE\nCALDERON HIERRO a la \u00e1rea de MEDICINA GENERAL ,\ncon diagn\u00f3stico de SINUSITIS CIE 10 (J 66), finalidad de\ndar a conocer que la paciente tuvo cita desde las 11:45 AM\nhasta las 1:30 PM\n\nDra. ELIZABETH CUEVA\nHOSPITAL GENERAL DOCENTE CALDERON",
+          "confidence": 68.62037037037037,
+          "languages_used": [
+            "eng",
+            "spa"
+          ],
+          "word_count": 78,
+          "success": true
+        }
+      }
+    }
+  ],
+  "llm_decision": {
+    "decision": "UNCERTAIN",
+    "explanation": "The medical certificate is an image file and contains the claimant's name, a diagnosis of sinusitis, and the date of the consultation. It also has a letterhead from HOSPITAL GENERAL DOCENTE CALDERON. However, the certificate lacks a visible signature and official stamp, which raises concerns about its authenticity. The consultation occurred on February 5, 2017, while the train journey was scheduled for February 2, 2017. While the claimant states the illness worsened the day before travel, the certificate is dated three days later. This delay warrants further investigation. Let me verify if HOSPITAL GENERAL DOCENTE CALDERON exists...",
+    "confidence": 0.6,
+    "policy_section": "Trip Cancellation - Medical emergency",
+    "fraud_indicators": [
+      "Missing signature on medical certificate",
+      "Certificate issued 3 days after the scheduled travel date"
+    ],
+    "required_documents": [
+      "Medical certificate",
+      "Proof of booking"
+    ],
+    "missing_documents": [],
+    "compensation_amount": "\u20ac29",
+    "reasoning_steps": [
+      "Checked that the medical certificate is an image file.",
+      "Verified that the claimant's name on the certificate matches the name in the claim description.",
+      "Identified that the certificate states a medical condition (sinusitis).",
+      "Noted the absence of a signature and official stamp on the certificate.",
+      "Analyzed the timeline: The train journey was on February 2, 2017, and the certificate was issued on February 5, 2017. This delay is suspicious.",
+      "The current date is 2017-02-21, the travel date was 2017-02-02. The travel date is in the past.",
+      "The medical certificate is from HOSPITAL GENERAL DOCENTE CALDERON, Quito, Ecuador.",
+      "Marked as UNCERTAIN due to the missing signature and the delay in issuing the certificate."
+    ]
+  },
+  "expected_answer": {
+    "decision": "UNCERTAIN",
+    "explanation": "minor date problem - appointment is 3 days after the flight",
+    "acceptable_decision": "APPROVE"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": false,
+    "expected": "UNCERTAIN",
+    "acceptable_alternative": "APPROVE",
+    "actual": "UNCERTAIN"
+  }
+}

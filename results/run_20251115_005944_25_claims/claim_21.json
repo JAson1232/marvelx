@@ -1,0 +1,49 @@
+{
+  "claim_number": 21,
+  "timestamp": "2025-11-15T01:12:46.680680",
+  "claim_data": {
+    "description": "To whom it may concern,\n\nI am writing to request a refund for a flight I was unable to take on **February 27, 2020**, due to a serious accident that required urgent medical attention.\n\nOn that day, I was treated at the Emiro Quintero Ca\u00f1izares Hospital in Oca\u00f1a after sustaining multiple injuries, including facial trauma, nasal fractures, and an oblique fracture in the upper arm. The attending physician recommended immediate rest and recovery.\n\nI was given a signed and sealed document issued by Dr. Jorge Andrez Arias Castro, which confirms the diagnosis and circumstances of my hospitalization. I can provide this document upon request.\n\nDue to this unexpected and incapacitating medical emergency, I was unable to attend my scheduled flight. I kindly ask that you take this situation into consideration and approve a refund for the unused ticket.\n\nThank you very much for your understanding.\n",
+    "documents": [
+      {
+        "filename": "supporting1.md",
+        "content": "**Current date is: 2020-03-15**\n\n**Name**: Camila Navarro Lopez  \n**Booking Ref**: FLT-14299761  \n**Price**: \u20ac164  \n**Flight**: LATAM 4232  \n**Operator**: LATAM Airlines  \n**Departure**: 2020-02-27 09:40 (local)  \n**From**: C\u00facuta Camilo Daza International Airport (CUC)  \n**To**: Bogot\u00e1 El Dorado (BOG)  \n**Seat**: 16A (Economy Class)  \n**Fare Type**: Light  \n**Booked on**: 2020-02-05 17:24  \n",
+        "type": "markdown"
+      }
+    ]
+  },
+  "image_metadata": [],
+  "llm_decision": {
+    "decision": "DENY",
+    "explanation": "The claim is denied because the medical documentation is described as a signed and sealed document issued by Dr. Jorge Andrez Arias Castro, but the actual document is not provided as an image file. The policy requires medical certificates to be image files of official documents, not text-based descriptions. The claim description mentions the availability of the document 'upon request,' but it was not included with the initial claim submission. Therefore, the claim lacks the necessary supporting documentation to verify the medical emergency.",
+    "confidence": 1.0,
+    "policy_section": "Trip Cancellation",
+    "fraud_indicators": [],
+    "required_documents": [
+      "Medical certificate (image file)",
+      "Proof of booking and amount paid"
+    ],
+    "missing_documents": [
+      "Medical certificate (image file)"
+    ],
+    "compensation_amount": null,
+    "reasoning_steps": [
+      "1. Reviewed the claim description and identified the stated reason for cancellation: a serious accident requiring urgent medical attention on February 27, 2020.",
+      "2. Analyzed the supporting document (supporting1.md) and extracted the relevant booking information: Flight LATAM 4232 from C\u00facuta to Bogot\u00e1 on February 27, 2020, booked on February 5, 2020, for \u20ac164.",
+      "3. Checked for the required medical certificate. The claim description mentions a signed and sealed document from Dr. Jorge Andrez Arias Castro, but no image file of the medical certificate was provided.",
+      "4. Verified that the policy requires medical certificates to be image files of official documents, not text-based descriptions.",
+      "5. Determined that the absence of the required medical certificate (image file) constitutes incomplete documentation, leading to a denial of the claim."
+    ]
+  },
+  "expected_answer": {
+    "decision": "DENY",
+    "explanation": "no supporting documentation provided",
+    "acceptable_decision": "UNCERTAIN"
+  },
+  "matches_expected": {
+    "exact_match": true,
+    "acceptable_match": false,
+    "expected": "DENY",
+    "acceptable_alternative": "UNCERTAIN",
+    "actual": "DENY"
+  }
+}
